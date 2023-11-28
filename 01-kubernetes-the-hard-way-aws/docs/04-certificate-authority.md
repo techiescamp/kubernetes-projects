@@ -16,11 +16,11 @@ Server certificates are used by servers (like the API server) to authenticate th
   <img src="https://github.com/techiescamp/kubernetes-projects/assets/106984297/d64fea29-fece-4538-a7b5-b45ece2255e4" alt="Description of Image" width="80%">
 </div>
 
-
 ## Certificate Authority
 
 In this section you will provision a Certificate Authority that can be used to generate additional TLS certificates.
 
+It is used to sign both client and server certificates, establishing a chain of trust.
 
 Generate the CA configuration file, certificate, and private key:
 
