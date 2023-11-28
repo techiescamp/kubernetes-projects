@@ -10,6 +10,8 @@ These certificates are part of the mutual TLS (mTLS) authentication process, whe
 
 The term "client certificates" in the context of Kubernetes refers to the certificates used for authenticating clients (like kubelet, kube-proxy, admin users, etc.) to the Kubernetes API server.
 
+Server certificates are used by servers (like the API server) to authenticate themselves to clients.
+
 <div align="center">
   <img src="https://github.com/techiescamp/kubernetes-projects/assets/106984297/d64fea29-fece-4538-a7b5-b45ece2255e4" alt="Description of Image" width="80%">
 </div>
