@@ -23,10 +23,13 @@ chmod +x cfssl*
 ```
 
 ```
-mkdir cert
-cd cert
-../cfssl print-defaults config > config.json
-../cfssl print-defaults csr > csr.json
+sudo mv cfssl cfssljson /usr/local/bin/
+```
+
+### MAC
+
+```
+brew install cfssl
 ```
 
 ### Verification

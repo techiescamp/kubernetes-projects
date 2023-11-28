@@ -19,6 +19,8 @@ echo $ENCRYPTION_KEY
 
 Create the `encryption-config.yaml` encryption config file:
 
+Copy the $ENCRYPTION_KEY value to the secret: "ENCRYPTION-KEY-HERE" in the following YAML.
+
 ```
 cat > encryption-config.yaml <<EOF
 kind: EncryptionConfig

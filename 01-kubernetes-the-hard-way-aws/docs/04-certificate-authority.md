@@ -47,7 +47,7 @@ cat > ca-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert -initca ca-csr.json | ../cfssljson -bare ca
+cfssl gencert -initca ca-csr.json | cfssljson -bare ca
 ```
 
 Results:
@@ -85,12 +85,12 @@ cat > admin-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -profile=kubernetes \
-  admin-csr.json | ../cfssljson -bare admin
+  admin-csr.json | cfssljson -bare admin
 ```
 
 Results:
@@ -139,13 +139,13 @@ EOF
     "Name=instance-state-name,Values=running" \
     --output text --query 'Reservations[].Instances[].PrivateIpAddress')
 
-  ../cfssl gencert \
+  cfssl gencert \
     -ca=ca.pem \
     -ca-key=ca-key.pem \
     -config=ca-config.json \
     -hostname=${instance_hostname},${external_ip},${internal_ip} \
     -profile=kubernetes \
-    worker-${i}-csr.json | ../cfssljson -bare worker-${i}
+    worker-${i}-csr.json | cfssljson -bare worker-${i}
 done
 ```
 
@@ -184,12 +184,12 @@ cat > kube-controller-manager-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -profile=kubernetes \
-  kube-controller-manager-csr.json | ../cfssljson -bare kube-controller-manager
+  kube-controller-manager-csr.json | cfssljson -bare kube-controller-manager
 ```
 
 Results:
@@ -224,12 +224,12 @@ cat > kube-proxy-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -profile=kubernetes \
-  kube-proxy-csr.json | ../cfssljson -bare kube-proxy
+  kube-proxy-csr.json | cfssljson -bare kube-proxy
 ```
 
 Results:
@@ -263,12 +263,12 @@ cat > kube-scheduler-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -profile=kubernetes \
-  kube-scheduler-csr.json | ../cfssljson -bare kube-scheduler
+  kube-scheduler-csr.json | cfssljson -bare kube-scheduler
 
 ```
 
@@ -308,13 +308,13 @@ cat > kubernetes-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -hostname=10.32.0.1,10.0.1.10,10.0.1.11,10.0.1.12,${KUBERNETES_PUBLIC_ADDRESS},127.0.0.1,${KUBERNETES_HOSTNAMES} \
   -profile=kubernetes \
-  kubernetes-csr.json | ../cfssljson -bare kubernetes
+  kubernetes-csr.json | cfssljson -bare kubernetes
 ```
 
 > The Kubernetes API server is automatically assigned the `kubernetes` internal dns name, which will be linked to the first IP address (`10.32.0.1`) from the address range (`10.32.0.0/24`) reserved for internal cluster services during the [control plane bootstrapping](08-bootstrapping-kubernetes-controllers.md#configure-the-kubernetes-api-server) lab.
@@ -352,12 +352,12 @@ cat > service-account-csr.json <<EOF
 }
 EOF
 
-../cfssl gencert \
+cfssl gencert \
   -ca=ca.pem \
   -ca-key=ca-key.pem \
   -config=ca-config.json \
   -profile=kubernetes \
-  service-account-csr.json | ../cfssljson -bare service-account
+  service-account-csr.json | cfssljson -bare service-account
 
 ```
 

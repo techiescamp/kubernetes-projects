@@ -10,7 +10,7 @@ This tutorial relies on Amazon Web Services (AWS) to simplify the provisioning o
 
 ### Install the AWS CLI
 
-Follow the AWS CLI [documentation](https://aws.amazon.com/cli/) to install and configure the `aws` command line utility.
+Follow the AWS CLI [documentation](https://devopscube.com/install-configure-aws-cli-linux/) to install and configure the `aws` command line utility.
 
 Verify the AWS CLI version using:
 
@@ -28,7 +28,6 @@ Run `aws configure` and provide the following information.
 
 ```
 aws configure
-
 ```
 ## Output
 
@@ -41,24 +40,36 @@ Default output format [json]:
 
 ## Running Commands in Parallel with tmux
 
+> The use of tmux is optional and not required to complete this tutorial.
+
 [tmux](https://github.com/tmux/tmux/wiki) can be used to run commands on multiple compute instances at the same time. Labs in this tutorial may require running the same commands across multiple compute instances, in those cases consider using tmux and splitting a window into multiple panes with synchronize-panes enabled to speed up the provisioning process.
 
-> The use of tmux is optional and not required to complete this tutorial.
 
 Follow the tmux [documentation](https://github.com/tmux/tmux/wiki/Getting-Started) to install and configure the `tmux` utility.
 
-To open a new  `tmux` terminal.
-```
-tmux
-```
-Split the window horizontally:
-```
-CTRL+b %
-```
-Split the window vertically:
-```
-CTRL+b 
-```
-![tmux](image-1.png) Labs in this tutorial may require running the same commands across multiple compute instances, in those cases consider using tmux and splitting a window into multiple panes with synchronize-panes enabled to speed up the provisioning process.
+#### Open tmux
 
-Next: [Installing the Client Tools](02-client-tools.md)
+First, start tmux by opening your terminal and typing `tmux`, then hit Enter.
+Create Multiple Panes:
+
+#### Split your tmux window into multiple panes. 
+
+You can split vertically by pressing `Ctrl + b`, then `%`, and horizontally by pressing `Ctrl + b`, then `"`.
+
+You can create as many panes as you need for parallel execution.
+
+#### Navigate to Each Pane:
+
+To switch to a different pane, press `Ctrl + b`, then use the arrow keys to navigate to the pane where you want to execute a command.
+
+#### Running Commands Simultaneously:
+
+If you want to run the same command in all panes at the same time, you can use the synchronize-panes feature.
+
+To enable this, press `Ctrl + b`, then type `:setw synchronize-panes on` and hit Enter. Now, anything you type in one pane will be mirrored in all other panes.
+To disable this feature, press `Ctrl + b`, type `:setw synchronize-panes off`, and hit Enter.
+
+
+Labs in this tutorial may require running the same commands across multiple compute instances, in those cases consider using tmux and splitting a window into multiple panes with synchronize-panes enabled to speed up the provisioning process.
+
+#### Next: [Installing the Client Tools](02-client-tools.md)

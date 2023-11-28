@@ -1,10 +1,12 @@
 # Provisioning Compute Resources
 
-[Guide](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/03-compute-resources.md)
+In this lab, you will setup the required networking infrastruture and nodes required for the cluster.
 
 ## Networking
 
 ### VPC
+
+Lets create a dedicated VPC for the setup.
 
 ```sh
 VPC_ID=$(aws ec2 create-vpc --cidr-block 10.0.0.0/16 --output text --query 'Vpc.VpcId')
@@ -14,6 +16,8 @@ aws ec2 modify-vpc-attribute --vpc-id ${VPC_ID} --enable-dns-hostnames '{"Value"
 ```
 
 ### Subnet
+
+Create a subnet.
 
 ```sh
 SUBNET_ID=$(aws ec2 create-subnet \
@@ -25,6 +29,8 @@ aws ec2 create-tags --resources ${SUBNET_ID} --tags Key=Name,Value=kubernetes
 
 ### Internet Gateway
 
+Create and attach a internet gateway to the VPC.
+
 ```sh
 INTERNET_GATEWAY_ID=$(aws ec2 create-internet-gateway --output text --query 'InternetGateway.InternetGatewayId')
 aws ec2 create-tags --resources ${INTERNET_GATEWAY_ID} --tags Key=Name,Value=kubernetes
@@ -32,6 +38,8 @@ aws ec2 attach-internet-gateway --internet-gateway-id ${INTERNET_GATEWAY_ID} --v
 ```
 
 ### Route Tables
+
+Create a route table with internet gatway route for the subnet.
 
 ```sh
 ROUTE_TABLE_ID=$(aws ec2 create-route-table --vpc-id ${VPC_ID} --output text --query 'RouteTable.RouteTableId')
@@ -41,6 +49,8 @@ aws ec2 create-route --route-table-id ${ROUTE_TABLE_ID} --destination-cidr-block
 ```
 
 ### Security Groups (aka Firewall Rules)
+
+Create a security group with all the required port access for the cluster.
 
 ```sh
 SECURITY_GROUP_ID=$(aws ec2 create-security-group \
