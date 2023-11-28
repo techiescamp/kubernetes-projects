@@ -2,9 +2,23 @@
 
 In this lab you will provision a [PKI Infrastructure](https://en.wikipedia.org/wiki/Public_key_infrastructure) using CloudFlare's PKI toolkit, [cfssl](https://github.com/cloudflare/cfssl), then use it to bootstrap a Certificate Authority, and generate TLS certificates for the following components: etcd, kube-apiserver, kube-controller-manager, kube-scheduler, kubelet, and kube-proxy.
 
+<div align="center">
+  <img src="https://github.com/techiescamp/kubernetes-projects/assets/106984297/fd34ac7a-0195-40bb-a98f-445687c4c07c" alt="Description of Image" width="60%">
+</div>
+
+These certificates are part of the mutual TLS (mTLS) authentication process, where both the client and the server verify each other's identity to establish a secure communication channel.
+
+The term "client certificates" in the context of Kubernetes refers to the certificates used for authenticating clients (like kubelet, kube-proxy, admin users, etc.) to the Kubernetes API server.
+
+<div align="center">
+  <img src="https://github.com/techiescamp/kubernetes-projects/assets/106984297/d64fea29-fece-4538-a7b5-b45ece2255e4" alt="Description of Image" width="80%">
+</div>
+
+
 ## Certificate Authority
 
 In this section you will provision a Certificate Authority that can be used to generate additional TLS certificates.
+
 
 Generate the CA configuration file, certificate, and private key:
 
@@ -367,7 +381,6 @@ Results:
 service-account-key.pem
 service-account.pem
 ```
-
 
 ## Distribute the Client and Server Certificates
 
