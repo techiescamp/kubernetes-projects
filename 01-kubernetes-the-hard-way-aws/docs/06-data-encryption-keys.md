@@ -17,9 +17,7 @@ echo $ENCRYPTION_KEY
 
 ## The Encryption Config File
 
-Create the `encryption-config.yaml` encryption config file:
-
-Copy the $ENCRYPTION_KEY value to the secret: "ENCRYPTION-KEY-HERE" in the following YAML.
+Create the `encryption-config.yaml` encryption config file with the encryption key.
 
 ```
 cat > encryption-config.yaml <<EOF
@@ -32,7 +30,7 @@ resources:
       - aescbc:
           keys:
             - name: key1
-              secret: ""
+              secret: "${ENCRYPTION_KEY}"
       - identity: {}
 EOF
 ```
@@ -46,7 +44,7 @@ for instance in controller-0 controller-1 controller-2; do
     "Name=instance-state-name,Values=running" \
     --output text --query 'Reservations[].Instances[].PublicIpAddress')
   
-  scp -i kubernetes.id_rsa encryption-config.yaml ubuntu@${external_ip}:~/
+  scp -i kubernetes.id_rsa -o StrictHostKeyChecking=no encryption-config.yaml ubuntu@${external_ip}:~/
 done
 ```
 

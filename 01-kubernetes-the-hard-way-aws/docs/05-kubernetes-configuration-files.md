@@ -196,7 +196,7 @@ for instance in worker-0 worker-1 worker-2; do
     "Name=instance-state-name,Values=running" \
     --output text --query 'Reservations[].Instances[].PublicIpAddress')
 
-  scp -i kubernetes.id_rsa \
+  scp -i kubernetes.id_rsa -o StrictHostKeyChecking=no \
     ${instance}.kubeconfig kube-proxy.kubeconfig ubuntu@${external_ip}:~/
 done
 ```
@@ -210,7 +210,7 @@ for instance in controller-0 controller-1 controller-2; do
     "Name=instance-state-name,Values=running" \
     --output text --query 'Reservations[].Instances[].PublicIpAddress')
   
-  scp -i kubernetes.id_rsa \
+  scp -i kubernetes.id_rsa -o StrictHostKeyChecking=no \
     admin.kubeconfig kube-controller-manager.kubeconfig kube-scheduler.kubeconfig ubuntu@${external_ip}:~/
 done
 ```

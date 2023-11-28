@@ -69,6 +69,8 @@ aws ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP_ID} --proto
 
 ### Kubernetes Public Access - Create a Network Load Balancer
 
+Create a load balancer that will be used as a control plane endpoint.
+
 ```sh
   LOAD_BALANCER_ARN=$(aws elbv2 create-load-balancer \
     --name kubernetes \
@@ -108,7 +110,7 @@ IMAGE_ID=$(aws ec2 describe-images --owners 099720109477 \
   --filters \
   'Name=root-device-type,Values=ebs' \
   'Name=architecture,Values=x86_64' \
-  'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*' \
+  'Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server*' \
   | jq -r '.Images|sort_by(.Name)[-1]|.ImageId')
 ```
 
