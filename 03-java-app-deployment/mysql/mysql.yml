@@ -21,9 +21,15 @@ spec:
         - name: MYSQL_RANDOM_ROOT_PASSWORD
           value: "yes"
         - name: MYSQL_USER
-          value: crunchops
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: username
         - name: MYSQL_PASSWORD
-          value : crunchops@1234
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: password
         - name: MYSQL_DATABASE
           value: petclinic
         volumeMounts:

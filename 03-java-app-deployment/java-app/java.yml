@@ -18,9 +18,15 @@ spec:
         image: techiescamp/kube-petclinic-app:1.0.0
         env:
             - name: DB_USERNAME
-              value: crunchops
+              valueFrom:
+                  secretKeyRef:
+                    name: mysql-cred
+                    key: username
             - name: DB_PASSWORD
-              value: crunchops@1234
+              valueFrom:
+                  secretKeyRef:
+                    name: mysql-cred
+                    key: password
         ports:
         - containerPort: 8080
         volumeMounts:
