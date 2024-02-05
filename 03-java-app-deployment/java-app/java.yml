@@ -15,24 +15,24 @@ spec:
     spec:
       containers:
       - name: java-app-container
-        image: techiescamp/kube-petclinic-app:1.0.0
+        image: techiescamp/kube-petclinic-app:2.0.0
         env:
-            - name: DB_USERNAME
-              valueFrom:
-                  secretKeyRef:
-                    name: mysql-cred
-                    key: username
-            - name: DB_PASSWORD
-              valueFrom:
-                  secretKeyRef:
-                    name: mysql-cred
-                    key: password
+          - name: DB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: mysql-cred
+                key: username
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-cred
+                key: password
         ports:
         - containerPort: 8080
         volumeMounts:
         - name: java-app-config
           mountPath: "/opt/config"
-        command: ["java", "-jar", "/app/java.jar", "--spring.config.location=/opt/config/application.properties", "--spring.profiles.active=mysql"]
+        command: ["java", "-javaagent:/app/jmx.jar=9090:/app/config.yml", "-jar", "/app/java.jar", "--spring.config.location=/opt/config/application.properties", "--spring.profiles.active=mysql"]
 
       volumes:
       - name: java-app-config
@@ -50,7 +50,14 @@ spec:
     app: java-app
   type: NodePort
   ports:
-  - protocol: TCP
+  - name: http
+    protocol: TCP
     port: 8080
     targetPort: 8080
     nodePort: 30144
+  - name: metrics
+    protocol: TCP
+    port: 9090
+    targetPort: 9090
+    nodePort: 30145
+
