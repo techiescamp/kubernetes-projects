@@ -27,6 +27,13 @@ spec:
                   secretKeyRef:
                     name: mysql-cred
                     key: password
+        resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
         ports:
         - containerPort: 8080
         volumeMounts:
