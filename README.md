@@ -8,7 +8,9 @@ If you are planning to use this repo for learning, please hit the star. Thanks!
 
 ## Project List
 
-01. [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+1. [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+2. [Setup Kubeadm Cluster](https://devopscube.com/setup-kubernetes-cluster-kubeadm/)
+3. [Deploy Java App With MySQL on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
 
 ## Kubernetes Certification Vouchers
 
