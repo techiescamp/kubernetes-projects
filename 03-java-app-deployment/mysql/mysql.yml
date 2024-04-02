@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  namespace: pet-clinic-db
+spec:
+  serviceName: "mysql"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        env:
+        - name: MYSQL_RANDOM_ROOT_PASSWORD
+          value: "yes"
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: password
+        - name: MYSQL_DATABASE
+          value: petclinic
+        volumeMounts:
+        - name: mysql-config
+          mountPath: /docker-entrypoint-initdb.d
+        resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+      volumes:
+      - name: mysql-config
+        configMap:
+          name: mysql-configmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  namespace: pet-clinic-db
+spec:
+  type: NodePort
+  selector:
+    app: mysql
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+      nodePort: 30244
+
+
+
+
+
