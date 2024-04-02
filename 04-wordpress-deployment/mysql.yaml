@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mysql
+  namespace: wordpress
+spec:
+  serviceName: "mysql"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:latest
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "admin@123"
+        - name: MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: username
+        - name: MYSQL_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: password
+        - name: MYSQL_DATABASE
+          value: wordpress_db
+        volumeMounts:
+        - name: mysql-volume
+          mountPath: /var/lib/mysql
+        - name: mysql-config
+          mountPath: /docker-entrypoint-initdb.d
+        resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+      volumes:
+          - name: mysql-config
+            configMap:
+              name: mysql-configmap
+          - name: mysql-volume
+            persistentVolumeClaim:
+              claimName: mysql-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+  namespace: wordpress
+spec:
+  type: NodePort
+  selector:
+    app: mysql
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306
+      nodePort: 30244
+
+
+
+
