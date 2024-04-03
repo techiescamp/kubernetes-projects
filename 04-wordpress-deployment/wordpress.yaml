@@ -48,7 +48,7 @@ spec:
             - name: nginx-config-volume
               mountPath: /etc/nginx/conf.d
             - name: wordpress-persistent-storage
-              mountPath: /var/www/html/wp-content
+              mountPath: /var/www/html/wordpress/wp-content
           readinessProbe:
             httpGet:
               path: /wp-login.php
