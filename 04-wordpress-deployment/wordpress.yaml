@@ -15,12 +15,10 @@ spec:
     spec:
       containers:
         - name: wordpress
-          image: techiescamp/wordpress-nginx:4.0.0
+          image: techiescamp/wordpress-nginx:6.0.0
           env:
             - name: DB_HOST
               value: mysql-service.wordpress.svc.cluster.local
-            - name: REDIS_HOST
-              value: redis.wordpress.svc.cluster.local
             - name: DB_USER
               valueFrom:
                 secretKeyRef:
@@ -32,7 +30,10 @@ spec:
                   name: mysql-cred
                   key: password
             - name: DB_NAME
-              value: wordpress_db
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-cred
+                  key: db-name
           ports:
             - containerPort: 80
               name: wordpress
@@ -47,13 +48,12 @@ spec:
             - name: nginx-config-volume
               mountPath: /etc/nginx/conf.d
             - name: wordpress-persistent-storage
-              mountPath: /var/www/html/wp-content
-            - name: wordpress-config-volume
-              mountPath: /etc/wordpress-config
+              mountPath: /var/www/html/wordpress/wp-content
           readinessProbe:
             httpGet:
-              path: /
+              path: /wp-login.php
               port: 80
+              scheme: 'HTTP'
             initialDelaySeconds: 30
             periodSeconds: 10
             timeoutSeconds: 5
@@ -61,14 +61,14 @@ spec:
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /
+              path: /wp-admin/install.php
               port: 80
+              scheme: 'HTTP'
             initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
             successThreshold: 1
             failureThreshold: 3
-
       volumes:
         - name: nginx-config-volume
           configMap:
@@ -76,9 +76,6 @@ spec:
         - name: wordpress-persistent-storage
           persistentVolumeClaim:
             claimName: wordpress-pvc
-        - name: wordpress-config-volume
-          configMap:
-            name: wordpress-config
 
 ---
 kind: Service

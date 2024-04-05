@@ -19,7 +19,10 @@ spec:
         image: mysql:latest
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "admin@123"
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: admin-password
         - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
@@ -31,7 +34,10 @@ spec:
               name: mysql-cred
               key: password
         - name: MYSQL_DATABASE
-          value: wordpress_db
+          valueFrom:
+            secretKeyRef:
+              name: mysql-cred
+              key: db-name
         volumeMounts:
         - name: mysql-volume
           mountPath: /var/lib/mysql
@@ -44,13 +50,45 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "200m"
+        livenessProbe:
+          exec:
+              command:
+                - /bin/bash
+                - -ec
+                - |
+                  password_aux="${MYSQL_ROOT_PASSWORD:-}"
+                  if [[ -f "${MYSQL_ROOT_PASSWORD_FILE:-}" ]]; then
+                      password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
+                  fi
+                  mysqladmin status -uroot -p"${password_aux}"
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+        readinessProbe:
+          exec:
+              command:
+                - /bin/bash
+                - -ec
+                - |
+                  password_aux="${MYSQL_ROOT_PASSWORD:-}"
+                  if [[ -f "${MYSQL_ROOT_PASSWORD_FILE:-}" ]]; then
+                      password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
+                  fi
+                  mysqladmin status -uroot -p"${password_aux}"
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
       volumes:
-          - name: mysql-config
-            configMap:
-              name: mysql-configmap
-          - name: mysql-volume
-            persistentVolumeClaim:
-              claimName: mysql-pvc
+        - name: mysql-config
+          configMap:
+            name: mysql-configmap
+        - name: mysql-volume
+          persistentVolumeClaim:
+            claimName: mysql-pvc
 
 ---
 apiVersion: v1
@@ -59,15 +97,10 @@ metadata:
   name: mysql-service
   namespace: wordpress
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: mysql
   ports:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-      nodePort: 30244
-
-
-
-
