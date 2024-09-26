@@ -25,7 +25,7 @@ The following are the best bundles to save 50% (up to $800 ) with code OSSEU24IC
 
 > Note: You have one year of validity to appear for the certification exam after registration
 
-## 📑 Table of Contents
+## 📑 List of Projects (ToC)
 
   * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01-kubernetes-the-hard-way-on-aws)
   * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02-setup-self-hosted-kubeadm-cluster)
