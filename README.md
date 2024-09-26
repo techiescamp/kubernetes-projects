@@ -20,7 +20,14 @@ The following are the best bundles to **save 20% + Extra Discount** with code **
 
 >Note: You have one year of validity to appear for the certification exam after registration
 
-## Project 01: Kubernetes the Hard Way on AWS
+## 📑 Table of Contents
+
+1. [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01-kubernetes-the-hard-way-on-aws)
+2. [📦 Project 02: Setup Self-Hosted Kubeadm Cluster](#project-02-setup-self-hosted-kubeadm-cluster)
+3. [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#project-03-deploy-java-app-with-mysql-on-kubernetes)
+4. [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#project-04-deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
+
+## 🛠️ Project 01: Kubernetes the Hard Way on AWS
 
 You will learn the following from the hard way setup on AWS
 
@@ -34,7 +41,7 @@ You will learn the following from the hard way setup on AWS
 
 **Project Documentation:** [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
 
-## Project 02: Setup Self Hosted Kubeadm Cluster
+## 📦 Project 02: Setup Self Hosted Kubeadm Cluster
 
 It is essential for a DevOps engineer to have a deep understanding of the various components that make up a Kubernetes cluster
 
