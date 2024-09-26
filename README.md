@@ -2,6 +2,8 @@
 
 Practical real-world hands-on projects to practice and learn Kubernetes implementations.
 
+These Kubernetes projects will help you master Kubernetes and DevOps skills through practical implementations. Learn how to deploy clusters, deploy different types of applications, manage services, and troubleshoot applications in Kubernetes environments with these practical projects.
+
 ## Hit the Star! ⭐
 
 If you are planning to use this repo for learning, please hit the star. Thanks!
