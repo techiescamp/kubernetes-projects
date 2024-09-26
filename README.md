@@ -41,7 +41,7 @@ You will learn the following from the hard way setup on AWS
 - Networking
 - As you're setting things up manually, you'll inevitably run into issues, which will teach you valuable troubleshooting skills.
 
-**Project Documentation:** [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+>**Project Documentation:** [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
 
 ## Project 02: Setup Self Hosted Kubeadm Cluster
 
@@ -53,7 +53,7 @@ So We strongly suggest using a self-hosted kubernetes cluster during your learni
 
 Also, If you're preparing for the CKA or CKS exam, it's important to note that cluster management using Kubeadm is part of the exam syllabus.
 
-**Project Video:** [Setup Kubeadm Cluster](https://www.youtube.com/watch?v=xX52dc3u2HU)
+>**Project Video:** [Setup Kubeadm Cluster](https://www.youtube.com/watch?v=xX52dc3u2HU)
 
 ## Project 03: Deploy Java App With MySQL on Kubernetes
 
@@ -81,7 +81,7 @@ Additionally, you will go through:
 
 This is a simple but effective project to put your basics into practice. If you learn to work with one app effectively, you can deploy any number of apps. It's all about understanding how to use these objects correctly, and this guide is a good starting point for that.
 
-**Project Documentation:** [Deploy Java & MySQl Apps on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
+>**Project Documentation:** [Deploy Java & MySQl Apps on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
 
 ## Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL
 
@@ -94,5 +94,5 @@ It also covers key kubernetes objects such as:
 
 Other Objects include Deployment, Service, Statefulful, Secret, Configmap etc.
 
-**Project Documentation:** [Deploy WordPress on Kubernetes with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
+>**Project Documentation:** [Deploy WordPress on Kubernetes with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
 
