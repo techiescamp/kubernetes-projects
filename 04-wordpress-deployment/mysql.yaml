@@ -50,6 +50,20 @@ spec:
             limits:
               memory: "512Mi"
               cpu: "200m"
+        startupProbe:
+          exec:
+              command:
+                - /bin/bash
+                - -ec
+                - |
+                  password_aux="${MYSQL_ROOT_PASSWORD:-}"
+                  if [[ -f "${MYSQL_ROOT_PASSWORD_FILE:-}" ]]; then
+                      password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
+                  fi
+                  mysqladmin status -uroot -p"${password_aux}"
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 30
         livenessProbe:
           exec:
               command:
@@ -61,7 +75,6 @@ spec:
                       password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
                   fi
                   mysqladmin status -uroot -p"${password_aux}"
-          initialDelaySeconds: 30
           periodSeconds: 10
           timeoutSeconds: 5
           successThreshold: 1
@@ -77,7 +90,6 @@ spec:
                       password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
                   fi
                   mysqladmin status -uroot -p"${password_aux}"
-          initialDelaySeconds: 30
           periodSeconds: 10
           timeoutSeconds: 5
           successThreshold: 1

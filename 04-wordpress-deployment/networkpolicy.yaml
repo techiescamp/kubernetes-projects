@@ -1,25 +1,6 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: wordpress-network-policy
-  namespace: wordpress
-spec:
-  podSelector:
-    matchLabels:
-      app: wordpress
-  policyTypes:
-    - Ingress
-    - Egress
-  egress:
-    - {}
-  ingress:
-    - ports:
-        - port: 80
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
   name: mysql-network-policy
   namespace: wordpress
 spec:
@@ -29,8 +10,13 @@ spec:
   policyTypes:
     - Ingress
     - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: wordpress
+      ports:
+        - port: 3306
   egress:
     - {}
-  ingress:
-    - ports:
-        - port: 3306
+

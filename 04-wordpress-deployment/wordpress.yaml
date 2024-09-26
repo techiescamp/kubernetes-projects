@@ -49,12 +49,20 @@ spec:
               mountPath: /etc/nginx/conf.d
             - name: wordpress-persistent-storage
               mountPath: /var/www/html/wordpress/wp-content
+          startupProbe:
+            httpGet:
+              path: /wp-login.php
+              port: 80
+              scheme: 'HTTP'
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 30
           readinessProbe:
             httpGet:
               path: /wp-login.php
               port: 80
               scheme: 'HTTP'
-            initialDelaySeconds: 30
             periodSeconds: 10
             timeoutSeconds: 5
             successThreshold: 1
@@ -64,7 +72,6 @@ spec:
               path: /wp-admin/install.php
               port: 80
               scheme: 'HTTP'
-            initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
             successThreshold: 1
@@ -72,7 +79,7 @@ spec:
       volumes:
         - name: nginx-config-volume
           configMap:
-            name: nginx-config
+            name: nginx-configmap
         - name: wordpress-persistent-storage
           persistentVolumeClaim:
             claimName: wordpress-pvc
