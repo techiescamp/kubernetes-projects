@@ -8,19 +8,22 @@ These Kubernetes projects will help you master Kubernetes and DevOps skills thro
 
 If you are planning to use this repo for learning, please hit the star. Thanks!
 
-## Kubernetes Certification Vouchers
+## Kubernetes Certification Coupons
 
 As part of our commitment to helping the DevOps community save money on Kubernetes Certifications, we continuously update the latest voucher codes from the Linux Foundation
 
-- 🚀  CKA, CKAD, CKS, or KCNA exam aspirants can **save 20%** today using code **DCUBE20** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+🚀 CKA, CKAD, CKS, or KCNA exam aspirants can save 40% today using code OSSEU24ICYMI at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-The following are the best bundles to **save 20% + Extra Discount** with code **DCUBE20**
+The following are the best bundles to save 50% (up to $800 ) with code OSSEU24ICYMI
 
-- CKA + CKAD + CKS Exam bundle ($407 Savings): [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
-- CKA + CKS Bundle ($308 Savings) [kube.promo/bundle](https://kube.promo/bundle)
-- KCNA + CKA ( $170 Savings) [kube.promo/kcka-bundle](https://kube.promo/kcna-cka)
+- KCNA + KCSA + CKA + CKAD + CKS ($788 Savings): kube.promo/kubestronaut
+- CKA + CKAD + CKS Exam bundle ($528 Savings): kube.promo/k8s-bundle
+- CKA + CKS Bundle ($355 Savings) kube.promo/bundle
+- KCNA + CKA ( $288 Savings) kube.promo/kcka-bundle
+- KCSA + CKS Exam Bundle ($229 Savings) kube.promo/kcsa-cks
+- KCNA + KCSA Exam Bundle ($203 Savings) kube.promo/kcna-kcsa
 
->Note: You have one year of validity to appear for the certification exam after registration
+> Note: You have one year of validity to appear for the certification exam after registration
 
 ## 📑 Table of Contents
 
