@@ -1,0 +1,102 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+  namespace: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+        - name: wordpress
+          image: techiescamp/wordpress-nginx:6.0.0
+          env:
+            - name: DB_HOST
+              value: mysql-service.wordpress.svc.cluster.local
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-cred
+                  key: username
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-cred
+                  key: password
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-cred
+                  key: db-name
+          ports:
+            - containerPort: 80
+              name: wordpress
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
+          volumeMounts:
+            - name: nginx-config-volume
+              mountPath: /etc/nginx/conf.d
+            - name: wordpress-persistent-storage
+              mountPath: /var/www/html/wordpress/wp-content
+          startupProbe:
+            httpGet:
+              path: /wp-login.php
+              port: 80
+              scheme: 'HTTP'
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 30
+          readinessProbe:
+            httpGet:
+              path: /wp-login.php
+              port: 80
+              scheme: 'HTTP'
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /wp-admin/install.php
+              port: 80
+              scheme: 'HTTP'
+            periodSeconds: 10
+            timeoutSeconds: 5
+            successThreshold: 1
+            failureThreshold: 3
+      volumes:
+        - name: nginx-config-volume
+          configMap:
+            name: nginx-configmap
+        - name: wordpress-persistent-storage
+          persistentVolumeClaim:
+            claimName: wordpress-pvc
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-service
+  namespace: wordpress
+spec:
+  type: NodePort
+  selector:
+    app: wordpress
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30004
