@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: java-app-container
-        image: techiescamp/kube-petclinic:3.0.0
+        image: techiescamp/kube-petclinic-app:3.0.0
         env:
             - name: DB_USERNAME
               valueFrom:
