@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: java-app-container
-        image: techiescamp/kube-petclinic-app:1.0.0
+        image: techiescamp/kube-petclinic-app:3.0.0
         env:
             - name: DB_USERNAME
               valueFrom:
@@ -40,7 +40,27 @@ spec:
         - name: java-app-config
           mountPath: "/opt/config"
         command: ["java", "-jar", "/app/java.jar", "--spring.config.location=/opt/config/application.properties", "--spring.profiles.active=mysql"]
-
+        startupProbe:
+          httpGet:
+            path: /actuator/health
+            port: 8080
+          failureThreshold: 30
+          periodSeconds: 20
+          initialDelaySeconds: 180
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8080
+          periodSeconds: 10
+          failureThreshold: 3
+          timeoutSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8080
+          periodSeconds: 15
+          failureThreshold: 3
+          timeoutSeconds: 10
       volumes:
       - name: java-app-config
         configMap:
@@ -60,4 +80,4 @@ spec:
   - protocol: TCP
     port: 8080
     targetPort: 8080
-    nodePort: 30144
+    nodePort: 32000
