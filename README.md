@@ -74,3 +74,16 @@ This is a simple but effective project to put your basics into practice. If you 
 
 **Project Documentation:** [Deploy Java & MySQl Apps on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
 
+## Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL
+
+In this project you will learn the steps to deploy WordPress on Kubernetes cluster with Nginx and MySQL database.
+
+It also covers key kubernetes objects such as:
+
+- **PersistantVolumeClaim (PVC)** – This creates and attaches PVs to WordPress Applications and MySQL databases to store data.
+- **NetworkPolicy** – Assign a network policy for MySQL to restrict its incoming traffic.
+
+Other Objects include Deployment, Service, Statefulful, Secret, Configmap etc.
+
+**Project Documentation:** [Deploy WordPress on Kubernetes with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
+
