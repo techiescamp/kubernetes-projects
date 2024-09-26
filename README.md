@@ -22,12 +22,12 @@ The following are the best bundles to **save 20% + Extra Discount** with code **
 
 ## 📑 Table of Contents
 
-1. [🛠️ Project 01: Kubernetes the Hard Way on AWS](#🛠️-project-01-kubernetes-the-hard-way-on-aws)
-2. [📦 Project 02: Setup Self-Hosted Kubeadm Cluster](#📦-project-02-setup-self-hosted-kubeadm-cluster)
-3. [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#☕-project-03-deploy-java-app-with-mysql-on-kubernetes)
-4. [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#📝-project-04-deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
+  * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01--kubernetes-the-hard-way-on-aws)
+  * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02--setup-self-hosted-kubeadm-cluster)
+  * [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#project-03--deploy-java-app-with-mysql-on-kubernetes)
+  * [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#project-04--deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
 
-## 🛠️ Project 01: Kubernetes the Hard Way on AWS
+## Project 01: Kubernetes the Hard Way on AWS
 
 You will learn the following from the hard way setup on AWS
 
@@ -41,7 +41,7 @@ You will learn the following from the hard way setup on AWS
 
 **Project Documentation:** [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
 
-## 📦 Project 02: Setup Self Hosted Kubeadm Cluster
+## Project 02: Setup Self Hosted Kubeadm Cluster
 
 It is essential for a DevOps engineer to have a deep understanding of the various components that make up a Kubernetes cluster
 
@@ -53,7 +53,7 @@ Also, If you're preparing for the CKA or CKS exam, it's important to note that c
 
 **Project Video:** [Setup Kubeadm Cluster](https://www.youtube.com/watch?v=xX52dc3u2HU)
 
-## ☕ Project 03: Deploy Java App With MySQL on Kubernetes
+## Project 03: Deploy Java App With MySQL on Kubernetes
 
 In this project, you will practically use the following key Kubernetes objects. It will help you understand how these objects can be used in real-world project implementations:
 
@@ -81,7 +81,7 @@ This is a simple but effective project to put your basics into practice. If you 
 
 **Project Documentation:** [Deploy Java & MySQl Apps on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
 
-## 📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL
+## Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL
 
 In this project you will learn the steps to deploy WordPress on Kubernetes cluster with Nginx and MySQL database.
 
