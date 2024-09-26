@@ -22,10 +22,10 @@ The following are the best bundles to **save 20% + Extra Discount** with code **
 
 ## 📑 Table of Contents
 
-  * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01--kubernetes-the-hard-way-on-aws)
-  * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02--setup-self-hosted-kubeadm-cluster)
-  * [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#project-03--deploy-java-app-with-mysql-on-kubernetes)
-  * [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#project-04--deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
+  * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01-kubernetes-the-hard-way-on-aws)
+  * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02-setup-self-hosted-kubeadm-cluster)
+  * [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#project-03-deploy-java-app-with-mysql-on-kubernetes)
+  * [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#project-04-deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
 
 ## Project 01: Kubernetes the Hard Way on AWS
 
