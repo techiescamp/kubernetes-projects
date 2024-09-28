@@ -25,7 +25,10 @@ The following are the best bundles to save 50% (up to $800 ) with code OSSEU24IC
 
 > Note: You have one year of validity to appear for the certification exam after registration
 
-## 📑 List of Projects (ToC)
+## 📑 Phase 1 Projects
+
+In phase 1, we will deploy different types of applications by creating each object manually. If you are learning Kubernetes, this will help you relate each object to real-world setups. It will also help you understand complex Helm charts and create custom application manifests from scratch.
+
 
   * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01-kubernetes-the-hard-way-on-aws)
   * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02-setup-self-hosted-kubeadm-cluster)
