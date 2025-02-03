@@ -8,7 +8,7 @@ These Kubernetes projects will help you master Kubernetes and DevOps skills thro
 
 If you are planning to use this repo for learning, please hit the star. Thanks!
 
-## Kubernetes Certification Voucher (UpTo 40% OFF) 🎉
+## Kubernetes Certification Voucher (UpTo 35% OFF) 🎉
 
 >**Important Note:** Kubernetes certification prices are increasing this month. So make use of this offer to lockin the savings.
 
