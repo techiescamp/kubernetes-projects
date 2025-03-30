@@ -1,6 +1,6 @@
 # kubernetes Hands On Projects For Learning
 
-Practical real-world hands-on projects to practice and learn Kubernetes implementations.
+This repository includes practical Kubernetes projects that progress from beginner to advanced concepts, helping you master Kubernetes by doing.
 
 These Kubernetes projects will help you master Kubernetes and DevOps skills through practical implementations. Learn how to deploy clusters, deploy different types of applications, manage services, and troubleshoot applications in Kubernetes environments with these practical projects.
 
@@ -27,80 +27,75 @@ The following are the best bundles to **save upto 55%** with code **MAR25CT**
 > [!NOTE]
 >⌛ Act fast—this limited-time offer won’t be around much longer!
 
-## 📑 Phase 1 Projects
+## 📑 Phase 1: Kubernetes Setup & Fundamentals
 
-In phase 1, we will deploy different types of applications by creating each object manually. If you are learning Kubernetes, this will help you relate each object to real-world setups. It will also help you understand complex Helm charts and create custom application manifests from scratch.
+In Phase 1, we will deploy different types of applications by creating each object manually. If you are learning Kubernetes, this will help you relate each object to real-world setups. It will also help you understand complex Helm charts and create custom application manifests from scratch.
 
+- [🛠️ Project 01: Kubernetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+- [📦 Project 02: Setup Self Hosted Kubeadm Cluster](https://devopscube.com/setup-kubernetes-cluster-kubeadm)
+- [☕ Project 03: Deploy Java App With MySQL on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
+- [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
+- [📋 Project 05: Deploy Python Flask App with PostgreSQL](#project-05-deploy-python-flask-app-with-postgresql)
+- [🌱 Project 06: Deploy Node.js App with MongoDB](#project-06-deploy-nodejs-app-with-mongodb)
 
-  * [🛠️ Project 01: Kubernetes the Hard Way on AWS](#project-01-kubernetes-the-hard-way-on-aws)
-  * [📦 Project 02: Setup Self Hosted Kubeadm Cluster](#project-02-setup-self-hosted-kubeadm-cluster)
-  * [☕ Project 03: Deploy Java App With MySQL on Kubernetes](#project-03-deploy-java-app-with-mysql-on-kubernetes)
-  * [📝 Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL](#project-04-deploy-wordpress-on-kubernetes-with-nginx-and-mysql)
+## 📑 Phase 2: Kubernetes Networking, Storage & Monitoring
 
-## Project 01: Kubernetes the Hard Way on AWS
+Phase 2 introduces intermediate Kubernetes concepts such as ingress, monitoring, dynamic storage, and more. This phase is critical for enhancing your practical skills in managing Kubernetes resources effectively.
 
-You will learn the following from the hard way setup on AWS
+- [🌐 Project 07: Ingress and Load Balancing](#project-07-ingress-and-load-balancing)
+- [📊 Project 08: Monitoring with Prometheus & Grafana](#project-08-monitoring-with-prometheus-and-grafana)
+- [🗃️ Project 09: Dynamic Storage Provisioning with Storage Classes](#project-09-dynamic-storage-provisioning-with-storage-classes)
+- [📡 Project 10: Deploy Loki Stack (Loki, Promtail, Grafana)](#project-10-deploy-loki-stack)
+- [🐋 Project 11: Manage Stateful Applications with StatefulSets](#project-11-manage-stateful-applications-with-statefulsets)
+- [🔧 Project 12: Implement Horizontal Pod Autoscaler (HPA)](#project-12-implement-horizontal-pod-autoscaler-hpa)
 
-- You'll get hands-on experience with Linux commands.
-- You'll get hands-on with AWS CLI
-- You will learn about systemd
-- You'll learn how to generate and manage SSL/TLS certificates for secure communication between components.
-- Encrypting data at rest.
-- Networking
-- As you're setting things up manually, you'll inevitably run into issues, which will teach you valuable troubleshooting skills.
+## 📑 Phase 3: Advanced Kubernetes Management & Automation
 
->**Project Documentation:** [Kuberenetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+Phase 3 covers advanced Kubernetes concepts like CRDs, operators, and complex deployment strategies. Mastering these will prepare you for advanced management and customization of Kubernetes clusters.
 
-## Project 02: Setup Self Hosted Kubeadm Cluster
+- [⚙️ Project 13: Creating Custom Resource Definitions (CRDs)](#project-13-creating-crds)
+- [👷 Project 14: Build a Kubernetes Operator](#project-14-build-a-kubernetes-operator)
+- [🚦 Project 15: Admission Webhooks](#project-15-admission-webhooks)
+- [📑 Project 16: Helm Charts and Custom Repositories](#project-16-helm-charts-and-custom-repositories)
+- [🌟 Project 17: Blue/Green Deployments](#project-17-blue-green-deployments)
+- [📦 Project 18: Canary Deployments](#project-18-canary-deployments)
+- [🔄 Project 19: Kubernetes Configuration Management with Kustomize](#project-19-configuration-management-with-kustomize)
 
-It is essential for a DevOps engineer to have a deep understanding of the various components that make up a Kubernetes cluster
+## 📑 Phase 4: Kubernetes Security & Secrets Management
 
-Building and maintaining a self-hosted Kubernetes cluster provides valuable hands-on experience and exposes you to the system's complexities. This experience will help you better understand the cluster control plane and worker node components. 
+Phase 4 helps you master security best practices, secret management, and secure architecture design for robust Kubernetes clusters.
 
-So We strongly suggest using a self-hosted kubernetes cluster during your learning process rather than using easily available solutions. Because Kubeadm allows you to access the VMs and provides the ability to troubleshoot and examine all the cluster components. With a multinode cluster, you can have a setup that mimics the real-world project setup.
+- [🔐 Project 20: Kubernetes Security Hardening](#project-20-kubernetes-security-hardening)
+- [🛡️ Project 21: Secure Secret Management](#project-21-secure-secret-management)
+- [🗝️ Project 22: Integrate HashiCorp Vault with Kubernetes](#project-22-integrate-vault-with-kubernetes)
+- [📜 Project 23: Kubernetes Audit Logging and Analysis](#project-23-audit-logging-and-analysis)
+- [🛠️ Project 24: Designing Network Architecture in Cloud for Secure Kubernetes Clusters](#project-24-designing-network-architecture)
+- [🔑 Project 25: Using External Secret Operator with Kubernetes](#project-25-external-secret-operator)
 
-Also, If you're preparing for the CKA or CKS exam, it's important to note that cluster management using Kubeadm is part of the exam syllabus.
+## 🚀 How to Use
 
->**Project Video:** [Setup Kubeadm Cluster](https://www.youtube.com/watch?v=xX52dc3u2HU)
+Clone the repository and start exploring projects sequentially or pick according to your learning needs:
 
-## Project 03: Deploy Java App With MySQL on Kubernetes
+```bash
+git clone <your-repo-link>
+cd <repo-name>
+```
 
-In this project, you will practically use the following key Kubernetes objects. It will help you understand how these objects can be used in real-world project implementations:
+## ✍️ Contributing
 
-- Deployment
-- HPA
-- ConfigMap
-- Secrets
-- StatefulSet
-- Service
-- Namespace
+Feel free to contribute by adding projects, improving documentation, or reporting issues.
 
-It also covers key concepts such as:
+```bash
+# Fork the repository
+# Create a feature branch
+git checkout -b new-feature
 
-- Startup, readiness, and liveness probes
-- Consuming secret and configmap data using Environment Variables
-- MySQL initialization script from ConfigMap to create tables
-- Creating an application properties file from ConfigMap to be consumed by the app
+# Commit your changes
+git commit -m 'Add new feature'
 
-Additionally, you will go through:
+# Push to the branch
+git push origin new-feature
+```
 
-- Building a Java Spring Boot application using Maven
-- Dockerizing the Java application and pushing it to Docker Hub
-
-This is a simple but effective project to put your basics into practice. If you learn to work with one app effectively, you can deploy any number of apps. It's all about understanding how to use these objects correctly, and this guide is a good starting point for that.
-
->**Project Documentation:** [Deploy Java & MySQl Apps on Kubernetes](https://devopscube.com/deploy-java-app-kubernetes/)
-
-## Project 04: Deploy WordPress on Kubernetes with Nginx and MySQL
-
-In this project you will learn the steps to deploy WordPress on Kubernetes cluster with Nginx and MySQL database.
-
-It also covers key kubernetes objects such as:
-
-- **PersistantVolumeClaim (PVC)** – This creates and attaches PVs to WordPress Applications and MySQL databases to store data.
-- **NetworkPolicy** – Assign a network policy for MySQL to restrict its incoming traffic.
-
-Other Objects include Deployment, Service, Statefulful, Secret, Configmap etc.
-
->**Project Documentation:** [Deploy WordPress on Kubernetes with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
-
+Open a Pull Request to propose your changes.
+```
