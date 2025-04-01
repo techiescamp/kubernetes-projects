@@ -4,6 +4,9 @@ This repository includes practical Kubernetes projects that progress from beginn
 
 These Kubernetes projects will help you master Kubernetes and DevOps skills through practical implementations. Learn how to deploy clusters, deploy different types of applications, manage services, and troubleshoot applications in Kubernetes environments with these practical projects.
 
+> Looking for an organized way to learn Kubernetes and prepare for the CKA exam?
+> Check out our [Complete CKA Certification Course](https://techiescamp.com/p/cka-complete-prep-course-practice-tests). It includes illustrations, hands-on exercises, real-world examples, and dedicated Discord support. Use code **DCUBE25** to get 25% OFF! .
+
 ## Hit the Star! ⭐
 
 If you are planning to use this repo for learning, please hit the star. Thanks!
