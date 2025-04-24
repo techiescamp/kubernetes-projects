@@ -1,0 +1,38 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: {{ .Release.Name }}-sc
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Release.Name }}-pv
+spec:
+  capacity:
+    storage: {{ .Values.pvc.storage }}
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/data
+  storageClassName: {{ .Release.Name }}-sc
+  persistentVolumeReclaimPolicy: Retain
+
+---
+
+# 3. PersistentVolumeClaim (using the template you provided)
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ .Release.Name }}-pvc
+  namespace: {{ .Release.Namespace }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.pvc.storage }}
+  storageClassName: {{ .Release.Name }}-sc

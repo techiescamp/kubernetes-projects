@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+    name: {{ .Release.Name }}
+    namespace: {{ .Release.Namespace }}
+spec:
+    podSelector:
+        matchLabels:
+            app: db
+    policyTypes:
+    - Ingress
+    ingress:
+        - from:
+            - namespaceSelector:
+                matchLabels:
+                    kubernetes.io/metadata.name: {{ .Values.policy.namespace }}
+            - podSelector:
+                matchLabels:
+                    app: {{ .Values.policy.appLabels.main_backend }}
+        - from:
+            - namespaceSelector:
+                matchLabels:
+                    kubernetes.io/metadata.name: {{ .Values.policy.namespace }}
+            - podSelector:
+                matchLabels:
+                    app: {{ .Values.policy.appLabels.report_backend }}

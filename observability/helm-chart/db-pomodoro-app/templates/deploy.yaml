@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db
+  name: {{ .Release.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db
+    spec:
+      containers:
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        name: {{ .Release.Name }}
+        args: ["--dbpath","/data/db"]
+        ports:
+        - containerPort: {{ .Values.service.port }}
+        readinessProbe:
+          tcpSocket:
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          failureThreshold: 3
+        livenessProbe:
+          tcpSocket:
+            port: {{ .Values.service.port }}
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          failureThreshold: 3
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: username
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ .Release.Name }}-secret
+              key: password
+        volumeMounts:
+        - name: "mongo-data-dir"
+          mountPath: "/data/db"
+        resources:
+          requests:
+            cpu: {{ .Values.resources.requests.cpu }}
+            memory: {{ .Values.resources.requests.memory }}
+          limits:
+            cpu: {{ .Values.resources.limits.cpu }}
+            memory: {{ .Values.resources.limits.memory }}
+      volumes:
+      - name: "mongo-data-dir"
+        persistentVolumeClaim:
+          claimName: {{ .Release.Name }}-pvc
