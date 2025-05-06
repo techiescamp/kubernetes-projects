@@ -13,7 +13,7 @@ grafana:
     - name: Jaeger
       type: jaeger
       access: proxy
-      url: http://jaeger-query.observability.svc.cluster.local:16686
+      url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:16686
       jsonData:
         nodeGraph:
           enabled: true
@@ -51,7 +51,7 @@ prometheus:
           - targets: ["pomodoro-frontend.fe-pomodoro.svc.cluster.local:3000"]
             labels:
               service: frontend
-          - targets: ["jaeger-query.observability.svc.cluster.local:16686"]
+          - targets: ["jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:16686"]
             labels:
               service: jaeger
           - targets: ["loki.loki.svc.cluster.local:80"]

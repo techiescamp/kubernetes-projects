@@ -31,7 +31,7 @@ jwt_key: mysecret
 session_secret: supersecret
 frontend_url: http://4.154.209.7:32749
 report_backend_url: http://4.154.209.7:30170
-jaeger_trace_url: http://jaeger-collector.observability.svc.cluster.local:14268
+jaeger_trace_url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:16686
 
 ## Network Policy
 policy:
