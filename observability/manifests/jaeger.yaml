@@ -5,15 +5,22 @@ metadata:
   namespace: opentelemetry-operator-system
 spec:
   image: jaegertracing/jaeger:latest
+  mode: deployment
   ports:
-  - name: jaeger
-    port: 16686
+    - name: jaeger-ui
+      port: 16686
+    - name: thrift-http
+      port: 14268
+    - name: otlp-grpc
+      port: 4317
+    - name: otlp-http
+      port: 4318
   config:
     service:
       extensions: [jaeger_storage, jaeger_query]
       pipelines:
         traces:
-          receivers: [otlp]    
+          receivers: [otlp, jaeger]
           exporters: [jaeger_storage_exporter]
     extensions:
       jaeger_query:
@@ -31,6 +38,10 @@ spec:
             endpoint: 0.0.0.0:4317
           http:
             endpoint: 0.0.0.0:4318
+      jaeger:
+        protocols:
+          thrift_http:
+            endpoint: 0.0.0.0:14268
     exporters:
       jaeger_storage_exporter:
         trace_storage: memstore

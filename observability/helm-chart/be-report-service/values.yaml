@@ -27,4 +27,4 @@ resources:
 ## Configmap template file data
 port: 7070
 mongourl: mongodb://adminuser:password123@pomodoro-db.db-pomodoro.svc.cluster.local:27017/pomodoro?authSource=admin
-jaeger_trace_url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:16686
+jaeger_trace_url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:14268
