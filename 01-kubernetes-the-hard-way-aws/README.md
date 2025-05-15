@@ -31,3 +31,4 @@ This tutorial assumes you have access to the [Amazon Web Service](https://aws.am
 * [Deploying the DNS Cluster Add-on](docs/12-dns-addon.md)
 * [Smoke Test](docs/13-smoke-test.md)
 * [Cleaning Up](docs/14-cleanup.md)
+* And this is the end.
