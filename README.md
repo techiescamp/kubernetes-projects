@@ -36,113 +36,135 @@ If you're learning from this repository, consider giving it a **star**! It helps
 
 ---
 
-## 📑 Phase 1: Kubernetes Fundamentals
+# Kubernetes DevOps Setup Guide
 
-This phase introduces the core concepts of Kubernetes and helps you understand how clusters and resources work.
+## 🖥️ Cluster Setup
+
+Learn how to manually deploy and configure Kubernetes clusters with a focus on foundational setup.
 
 ### 🔨 Projects
 
-- **Project 01**: [Understanding Kubernetes Architecture](https://devopscube.com/kubernetes-architecture-explained/)
-- **Project 02**: [Setup Kubernetes Cluster Using Kubeadm](https://devopscube.com/setup-kubernetes-cluster-kubeadm/)
-- **Project 03**: [Upgrade Kubernetes Cluster](https://devopscube.com/upgrade-kubernetes-cluster-kubeadm/)
-- **Project 04**: [Install Minikube Tutorial](https://devopscube.com/kubernetes-minikube-tutorial/)
-- **Project 05**: [Kubeconfig File Explained](https://devopscube.com/kubernetes-kubeconfig-file/)
-- **Project 06**: [Kubernetes Init Containers](https://devopscube.com/kubernetes-init-containers/)
-- **Project 07**: [Kubernetes Configuration Best Practices](https://devopscube.com/kubernetes-cluster-configurations/)
-- **Project 08**: [Run Pods as Non-Root Users](https://devopscube.com/run-kubernetes-pod-as-non-root-user/)
-- **Project 09**: [Kubernetes Service Accounts & Tokens](https://devopscube.com/kubernetes-api-access-service-account/)
-- **Project 10**: [Helm Charts for Beginners](https://devopscube.com/create-helm-chart/)
-- **Project 11**: [Create Static Pod](https://devopscube.com/create-static-pod-kubernetes/)
-- **Project 12**: [What is a Kubernetes Pod?](https://devopscube.com/kubernetes-pod/)
-- **Project 13**: [DaemonSet Guide](https://devopscube.com/kubernetes-daemonset/)
-- **Project 14**: [Create Kubernetes YAML Files](https://devopscube.com/create-kubernetes-yaml/)
-- **Project 15**: [Jobs and CronJobs](https://devopscube.com/create-kubernetes-jobs-cron-jobs/)
-- **Project 16**: [Kubernetes Role & RBAC](https://devopscube.com/create-kubernetes-role/)
-- **Project 17**: [Kubernetes Deployment Tutorial](https://devopscube.com/kubernetes-deployment-tutorial/)
+- **Project 1**: [Kubernetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
+- **Project 2**: [Self-Hosted Kubeadm Cluster](https://devopscube.com/setup-kubernetes-cluster-kubeadm)
 
 ---
 
-## 📦 Phase 2: Kubernetes Setup & End-to-End Projects
+## 🌐 Networking
 
-Learn how to manually deploy real-world applications and build a solid understanding of Kubernetes object relationships.
+Explore intermediate concepts like ingress controllers and autoscaling for network management.
 
 ### 🔨 Projects
 
-- **Project 18**: [Kubernetes the Hard Way on AWS](https://github.com/techiescamp/kubernetes-projects/tree/main/01-kubernetes-the-hard-way-aws)
-- **Project 19**: [Self-Hosted Kubeadm Cluster](https://devopscube.com/setup-kubernetes-cluster-kubeadm)
-- **Project 20**: [Jenkins as StatefulSet](https://devopscube.com/deploy-jenkins-as-statefulset-on-kubernetes/)
-- **Project 21**: [Deploy Java App with MySQL](https://devopscube.com/deploy-java-app-kubernetes/)
-- **Project 22**: [Deploy WordPress with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
-- **Project 23**: [Deploy Python Flask App with PostgreSQL](https://devopscube.com/deploy-python-flask-app-with-postgresql)
-- **Project 24**: [Deploy Node.js App with MongoDB](https://devopscube.com/deploy-nodejs-app-with-mongodb)
-- **Project 25**: [Jenkins Build Agents on Kubernetes](https://devopscube.com/jenkins-build-agents-kubernetes/)
-- **Project 26**: [Deploy MongoDB](https://devopscube.com/deploy-mongodb-kubernetes/)
-- **Project 27**: [PostgreSQL StatefulSet HA](https://devopscube.com/deploy-postgresql-statefulset/)
-- **Project 28**: [Setup Jenkins on Kubernetes](https://devopscube.com/setup-jenkins-on-kubernetes-cluster/)
+- **Project 3**: [Kubernetes Gateway API](https://devopscube.com/kubernetes-gateway-api/)
+- **Project 4**: [Cluster Autoscaler on EKS](https://devopscube.com/cluster-autoscaler/)
+- **Project 5**: [Nginx Ingress Controller + Cert Manager](https://devopscube.com/nginx-ingress-with-cert-manager/)
+- **Project 6**: [TLS/SSL Ingress Config](https://devopscube.com/configure-ingress-tls-kubernetes/)
 
 ---
 
-## 🌐 Phase 3: Networking, Storage & Monitoring
+## 🔐 Secret Management
 
-Explore intermediate concepts such as ingress controllers, monitoring tools, and dynamic storage provisioning.
+Learn how to handle Kubernetes secrets, vaulting mechanisms, and external secrets management.
 
 ### 🔨 Projects
 
-- **Project 29**: [Kubernetes Gateway API](https://devopscube.com/kubernetes-gateway-api/)
-- **Project 30**: [Cluster Autoscaler on EKS](https://devopscube.com/cluster-autoscaler/)
-- **Project 31**: [Nginx Ingress Controller + Cert Manager](https://devopscube.com/nginx-ingress-with-cert-manager/)
-- **Project 32**: [Grafana Loki Setup & Logging](https://devopscube.com/setup-grafana-loki/)
-- **Project 33**: [Dynamic Storage Provisioning](https://devopscube.com/dynamic-storage-provisioning-with-storage-classes)
-- **Project 34**: [Loki Stack (Loki, Promtail, Grafana)](https://devopscube.com/deploy-loki-stack)
-- **Project 35**: [Stateful Applications with StatefulSets](https://devopscube.com/manage-stateful-applications-with-statefulsets)
-- **Project 36**: [Horizontal Pod Autoscaler](https://devopscube.com/implement-horizontal-pod-autoscaler-hpa)
-- **Project 37**: [Prometheus JMX Exporter](https://devopscube.com/prometheus-jmx-exporter-on-kubernetes/)
-- **Project 38**: [TLS/SSL Ingress Config](https://devopscube.com/configure-ingress-tls-kubernetes/)
-- **Project 39**: [Setup Grafana](https://devopscube.com/setup-grafana-kubernetes/)
-- **Project 40**: [Kube State Metrics](https://devopscube.com/setup-kube-state-metrics/)
-- **Project 41**: [Alert Manager](https://devopscube.com/alert-manager-kubernetes-guide/)
-- **Project 42**: [Node Exporter Setup](https://devopscube.com/node-exporter-kubernetes/)
-- **Project 43**: [EFK Stack Logging](https://devopscube.com/setup-efk-stack-on-kubernetes/)
-- **Project 44**: [Kubernetes Logging Guide](https://devopscube.com/kubernetes-logging-tutorial/)
-- **Project 45**: [Sensu Monitoring with Sidecar](https://devopscube.com/kubernetes-monitoring-sensu/)
+- **Project 7**: [Encrypt Kubernetes Secrets using Sealed Secrets](https://devopscube.com/sealed-secrets-kubernetes/)
+- **Project 8**: [Setup Vault in Kubernetes](https://devopscube.com/vault-in-kubernetes/)
+- **Project 9**: [External Secrets Operator on EKS](https://devopscube.com/kubernetes-external-secrets-operator/)
+- **Project 10**: [Vault Agent Injector to Inject Secrets in Pods](https://devopscube.com/vault-agent-injector-tutorial/)
+- **Project 11**: [Secrets Store CSI Driver on AWS EKS](https://devopscube.com/secrets-store-csi-dirver-eks/)
 
 ---
 
-## ⚙️ Phase 4: Advanced Kubernetes Management & Automation
+## 🛠️ Infra Deployment
 
-Explore CRDs, Operators, GitOps, advanced deployment strategies, and backup tools.
-
-### 🔨 Projects
-
-- **Project 46**: [Create Custom Resource Definitions (CRDs)](https://devopscube.com/creating-crds)
-- **Project 47**: [Build Kubernetes Operator](https://devopscube.com/build-a-kubernetes-operator)
-- **Project 48**: [Admission Webhooks](https://devopscube.com/admission-webhooks/)
-- **Project 49**: [Helm Charts (Advanced)](https://devopscube.com/create-helm-chart/)
-- **Project 50**: [Kustomize Secret & ConfigMap Generators](https://devopscube.com/kuztomize-configmap-generators/)
-- **Project 51**: [Argo CD Setup](https://devopscube.com/setup-argo-cd-using-helm/)
-- **Project 52**: [Blue/Green Deployments](https://devopscube.com/blue-green-deployments/)
-- **Project 53**: [Canary Deployments](https://devopscube.com/canary-deployments/)
-- **Project 54**: [Etcd Backup & Restore](https://devopscube.com/backup-etcd-restore-kubernetes/)
-- **Project 55**: [Velero for Backup & Restore](https://devopscube.com/backup-and-restore-eks-cluster-velero/)
-- **Project 56**: [Build Docker Images in Pods](https://devopscube.com/build-docker-image-kubernetes-pod/)
-- **Project 57**: [Enable Feature Gates](https://devopscube.com/enable-feature-gates-kubeadm/)
-- **Project 58**: [AWS Cloud Controller Manager](https://devopscube.com/aws-cloud-controller-manager/)
-
-## 🔐 Phase 5: Kubernetes Security & Secrets Management
-
-Master security features in Kubernetes, learn how to manage secrets safely, and secure your clusters against vulnerabilities.
+Learn how to set up and manage the underlying infrastructure, including monitoring, storage, and provisioning.
 
 ### 🔨 Projects
 
-- **Project 59**: [Seccomp in Kubernetes](https://devopscube.com/seccomp-in-kubernetes/)
-- **Project 60**: [Encrypt Kubernetes Secrets using Sealed Secrets](https://devopscube.com/sealed-secrets-kubernetes/)
-- **Project 61**: [Setup Vault in Kubernetes](https://devopscube.com/vault-in-kubernetes/)
-- **Project 62**: [Audit Logging & Analysis](https://devopscube.com/kubernetes-audit-logging/)
-- **Project 63**: [Design Secure Network Architecture for Clusters](https://devopscube.com/designing-network-architecture-secure-kubernetes/)
-- **Project 64**: [Secrets Store CSI Driver on AWS EKS](https://devopscube.com/secrets-store-csi-dirver-eks/)
-- **Project 65**: [External Secrets Operator on EKS](https://devopscube.com/kubernetes-external-secrets-operator/)
-- **Project 66**: [Vault Agent Injector to Inject Secrets in Pods](https://devopscube.com/vault-agent-injector-tutorial/)
-- **Project 67**: [Kube-Bench – Kubernetes CIS Benchmarking Tool](https://devopscube.com/kube-bench-guide/)
+- **Project 12**: [Dynamic Storage Provisioning](https://devopscube.com/dynamic-storage-provisioning-with-storage-classes)
+- **Project 13**: [Loki Stack (Loki, Promtail, Grafana)](https://devopscube.com/deploy-loki-stack)
+- **Project 14**: [Prometheus JMX Exporter](https://devopscube.com/prometheus-jmx-exporter-on-kubernetes/)
+- **Project 15**: [Setup Grafana](https://devopscube.com/setup-grafana-kubernetes/)
+- **Project 16**: [Node Exporter Setup](https://devopscube.com/node-exporter-kubernetes/)
+- **Project 17**: [EFK Stack Logging](https://devopscube.com/setup-efk-stack-on-kubernetes/)
+
+---
+
+## 🚀 App Deployment
+
+Learn to deploy and scale various real-world applications on Kubernetes.
+
+### 🔨 Projects
+
+- **Project 18**: [Jenkins as StatefulSet](https://devopscube.com/deploy-jenkins-as-statefulset-on-kubernetes/)
+- **Project 19**: [Deploy Java App with MySQL](https://devopscube.com/deploy-java-app-kubernetes/)
+- **Project 20**: [Deploy WordPress with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
+- **Project 21**: [Deploy Python Flask App with PostgreSQL](https://devopscube.com/deploy-python-flask-app-with-postgresql)
+- **Project 22**: [Deploy Node.js App with MongoDB](https://devopscube.com/deploy-nodejs-app-with-mongodb)
+- **Project 23**: [Jenkins Build Agents on Kubernetes](https://devopscube.com/jenkins-build-agents-kubernetes/)
+- **Project 24**: [Deploy MongoDB](https://devopscube.com/deploy-mongodb-kubernetes/)
+- **Project 25**: [PostgreSQL StatefulSet HA](https://devopscube.com/deploy-postgresql-statefulset/)
+- **Project 26**: [Setup Jenkins on Kubernetes](https://devopscube.com/setup-jenkins-on-kubernetes-cluster/)
+
+---
+
+## 💾 Storage
+
+Manage persistent storage, volumes, and stateful apps in Kubernetes.
+
+### 🔨 Projects
+
+- **Project 27**: [Stateful Applications with StatefulSets](https://devopscube.com/manage-stateful-applications-with-statefulsets)
+- **Project 28**: [Horizontal Pod Autoscaler](https://devopscube.com/implement-horizontal-pod-autoscaler-hpa/)
+- **Project 29**: [Kube State Metrics](https://devopscube.com/setup-kube-state-metrics/)
+
+---
+
+## 🔐 Security
+
+Master Kubernetes security best practices, policies, and runtime protection.
+
+### 🔨 Projects
+
+- **Project 30**: [Seccomp in Kubernetes](https://devopscube.com/seccomp-in-kubernetes/)
+- **Project 31**: [Audit Logging & Analysis](https://devopscube.com/kubernetes-audit-logging/)
+- **Project 32**: [Design Secure Network Architecture for Clusters](https://devopscube.com/designing-network-architecture-secure-kubernetes/)
+- **Project 33**: [Kube-Bench – Kubernetes CIS Benchmarking Tool](https://devopscube.com/kube-bench-guide/)
+
+---
+
+## 🛠️ End-to-End Projects
+
+Combine CRDs, GitOps, advanced deploy strategies, and more.
+
+### 🔨 Projects
+
+- **Project 34**: [Create Custom Resource Definitions (CRDs)](https://devopscube.com/creating-crds)
+- **Project 35**: [Build Kubernetes Operator](https://devopscube.com/build-a-kubernetes-operator)
+- **Project 36**: [Admission Webhooks](https://devopscube.com/admission-webhooks/)
+- **Project 37**: [Argo CD Setup](https://devopscube.com/setup-argo-cd-using-helm/)
+- **Project 38**: [Blue/Green Deployments](https://devopscube.com/blue-green-deployments/)
+- **Project 39**: [Canary Deployments](https://devopscube.com/canary-deployments/)
+- **Project 40**: [Build Docker Images in Pods](https://devopscube.com/build-docker-image-kubernetes-pod/)
+- **Project 41**: [Kustomize Secret & ConfigMap Generators](https://devopscube.com/kuztomize-configmap-generators/)
+- **Project 42**: [Helm Charts (Advanced)](https://devopscube.com/create-helm-chart/)
+
+---
+
+## ⚖️ Compliance & Backup Strategy
+
+Ensure your cluster meets compliance and disaster recovery standards.
+
+### 🔨 Projects
+
+- **Project 43**: [Etcd Backup & Restore](https://devopscube.com/backup-etcd-restore-kubernetes/)
+- **Project 44**: [Velero for Backup & Restore](https://devopscube.com/backup-and-restore-eks-cluster-velero/)
+- **Project 45**: [Enable Feature Gates](https://devopscube.com/enable-feature-gates-kubeadm/)
+- **Project 46**: [AWS Cloud Controller Manager](https://devopscube.com/aws-cloud-controller-manager/)
+- **Project 47**: [Alert Manager](https://devopscube.com/alert-manager-kubernetes-guide/)
+- **Project 48**: [Kubernetes Logging Guide](https://devopscube.com/kubernetes-logging-tutorial/)
+- **Project 49**: [Sensu Monitoring with Sidecar](https://devopscube.com/kubernetes-monitoring-sensu/)
 
 ---
 
