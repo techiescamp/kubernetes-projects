@@ -9,19 +9,6 @@ grafana:
       jsonData:
         maxLines: 1000
       version: 1
-    
-    - name: Jaeger
-      type: jaeger
-      access: proxy
-      url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:16686
-      jsonData:
-        nodeGraph:
-          enabled: true
-        tracesToLogs:
-          datasourceUid: 'Loki'
-          tags: ['job', 'instance', 'pod', 'namespace']
-          filterByTraceID: false
-          filterBySpanID: false
 
   service: 
     type: NodePort
