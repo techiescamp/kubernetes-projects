@@ -6,7 +6,7 @@ image:
   pullPolicy: IfNotPresent
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 7000
   nodeport: 30163
 
@@ -29,8 +29,8 @@ port: 7000
 mongourl: mongodb://adminuser:password123@pomodoro-db.db-pomodoro.svc.cluster.local:27017/pomodoro?authSource=admin
 jwt_key: mysecret
 session_secret: supersecret
-frontend_url: http://4.154.209.7:32749
-report_backend_url: http://4.154.209.7:30170
+frontend_url: http://pomodoro-frontend.fe-pomodoro.svc.cluster.local:7000
+report_backend_url: http://pomodoro-report-backend.be-pomodoro.svc.cluster.local:7070
 jaeger_trace_url: http://jaeger-inmemory-instance-collector.opentelemetry-operator-system.svc.cluster.local:14268
 
 ## Network Policy

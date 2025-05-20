@@ -18,13 +18,10 @@ spec:
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: REACT_APP_BACKEND_API_URL
+              value: {{ .Values.backend_url }}
+            - name: REACT_APP_UI_URL
+              value: {{ .Values.api_url }}
           ports:
             - containerPort: {{ .Values.service.port }}
-          volumeMounts:
-          - name: {{ .Release.Name }}
-            mountPath: {{ .Values.configmap.mountpath }}
-            subPath: {{ .Values.configmap.subpath }}
-      volumes:
-      - name: {{ .Release.Name }}
-        configMap:
-          name: {{ .Release.Name }}
