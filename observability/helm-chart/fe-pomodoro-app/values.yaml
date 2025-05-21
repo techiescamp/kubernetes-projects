@@ -5,10 +5,6 @@ image:
   tag: "4.0.0"
   pullPolicy: IfNotPresent
 
-configmap:
-  mountpath: /app/.env
-  subpath: .env
-
 service:
   type: NodePort
   port: 3000
