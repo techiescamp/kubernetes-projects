@@ -96,15 +96,16 @@ Collect and analyze metrics and logs using popular Kubernetes observability tool
 
 ### 🔨 Projects
 
-- **Project 17**: [Loki Stack (Loki, Promtail, Grafana)](https://devopscube.com/deploy-loki-stack)
-- **Project 18**: [Prometheus JMX Exporter](https://devopscube.com/prometheus-jmx-exporter-on-kubernetes/)
-- **Project 19**: [Setup Grafana](https://devopscube.com/setup-grafana-kubernetes/)
-- **Project 20**: [Node Exporter Setup](https://devopscube.com/node-exporter-kubernetes/)
-- **Project 21**: [EFK Stack Logging](https://devopscube.com/setup-efk-stack-on-kubernetes/)
-- **Project 22**: [Audit Logging & Analysis](https://devopscube.com/kubernetes-audit-logging/)
-- **Project 23**: [Alert Manager](https://devopscube.com/alert-manager-kubernetes-guide/)
-- **Project 24**: [Kubernetes Logging Guide](https://devopscube.com/kubernetes-logging-tutorial/)
-- **Project 25**: [Sensu Monitoring with Sidecar](https://devopscube.com/kubernetes-monitoring-sensu/)
+- **Project 17**: [Loki Setup](https://devopscube.com/setup-grafana-loki/)
+- **Project 18**: [Setup Prometheus](https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/)
+- **Project 19**: [Prometheus JMX Exporter](https://devopscube.com/prometheus-jmx-exporter-on-kubernetes/)
+- **Project 20**: [Setup Grafana](https://devopscube.com/setup-grafana-kubernetes/)
+- **Project 21**: [Node Exporter Setup](https://devopscube.com/node-exporter-kubernetes/)
+- **Project 22**: [EFK Stack Logging](https://devopscube.com/setup-efk-stack-on-kubernetes/)
+- **Project 23**: [Audit Logging & Analysis](https://devopscube.com/kubernetes-audit-logging/)
+- **Project 24**: [Alert Manager](https://devopscube.com/alert-manager-kubernetes-guide/)
+- **Project 25**: [Kubernetes Logging Guide](https://devopscube.com/kubernetes-logging-tutorial/)
+- **Project 26**: [Sensu Monitoring with Sidecar](https://devopscube.com/kubernetes-monitoring-sensu/)
 
 ---
 
@@ -114,11 +115,10 @@ Learn to deploy and scale various real-world applications on Kubernetes.
 
 ### 🔨 Projects
 
-- **Project 26**: [Deploy Java App with MySQL](https://devopscube.com/deploy-java-app-kubernetes/)
-- **Project 27**: [Deploy WordPress with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
-- **Project 28**: [Deploy Python Flask App with PostgreSQL](https://devopscube.com/deploy-python-flask-app-with-postgresql)
-- **Project 29**: [Deploy Node.js App with MongoDB](https://devopscube.com/deploy-nodejs-app-with-mongodb)
-- **Project 30**: [Deploy MongoDB](https://devopscube.com/deploy-mongodb-kubernetes/)
+- **Project 27**: [Deploy Java App with MySQL](https://devopscube.com/deploy-java-app-kubernetes/)
+- **Project 28**: [Deploy WordPress with Nginx and MySQL](https://devopscube.com/deploy-wordpress-on-kubernetes/)
+- **Project 29**: Deploy Python Flask App with PostgreSQL *(In Development)*
+- **Project 30**: Deploy Node.js App with MongoDB *(In Development)*
 
 ---
 
@@ -128,8 +128,9 @@ Leverage Kubernetes autoscaling features for better resource efficiency.
 
 ### 🔨 Projects
 
-- **Project 31**: [Horizontal Pod Autoscaler](https://devopscube.com/implement-horizontal-pod-autoscaler-hpa/)
-- **Project 32**: [Cluster Autoscaler on EKS](https://devopscube.com/cluster-autoscaler/)
+- **Project 31**: [Horizontal Pod Autoscaler] *(In Development)*
+- **Project 32**: [Vertical Pod Autoscaler](https://blog.techiescamp.com/kubernetes-vertical-pod-autoscaler/)
+- **Project 33**: [Cluster Autoscaler on EKS](https://devopscube.com/cluster-autoscaler/)
 
 ---
 
@@ -139,10 +140,11 @@ Manage persistent storage, volumes, and stateful apps in Kubernetes.
 
 ### 🔨 Projects
 
-- **Project 33**: [PostgreSQL StatefulSet HA](https://devopscube.com/deploy-postgresql-statefulset/)
-- **Project 34**: [Stateful Applications with StatefulSets](https://devopscube.com/manage-stateful-applications-with-statefulsets)
-- **Project 35**: [Kube State Metrics](https://devopscube.com/setup-kube-state-metrics/)
-- **Project 36**: [Dynamic Storage Provisioning](https://devopscube.com/dynamic-storage-provisioning-with-storage-classes)
+- **Project 34**: [Deploy MongoDB](https://devopscube.com/deploy-mongodb-kubernetes/)
+- **Project 35**: [PostgreSQL StatefulSet HA](https://devopscube.com/deploy-postgresql-statefulset/)
+- **Project 36**: [Stateful Applications with StatefulSets](https://devopscube.com/manage-stateful-applications-with-statefulsets)
+- **Project 37**: [Kube State Metrics](https://devopscube.com/setup-kube-state-metrics/)
+- **Project 38**: [Dynamic Storage Provisioning](https://devopscube.com/dynamic-storage-provisioning-with-storage-classes)
 
 ---
 
@@ -152,8 +154,8 @@ Master Kubernetes security best practices, policies, and runtime protection.
 
 ### 🔨 Projects
 
-- **Project 37**: [Seccomp in Kubernetes](https://devopscube.com/seccomp-in-kubernetes/)
-- **Project 38**: [Kube-Bench – Kubernetes CIS Benchmarking Tool](https://devopscube.com/kube-bench-guide/)
+- **Project 39**: [Seccomp in Kubernetes](https://devopscube.com/seccomp-in-kubernetes/)
+- **Project 40**: [Kube-Bench – Kubernetes CIS Benchmarking Tool](https://devopscube.com/kube-bench-guide/)
 
 ---
 
@@ -163,8 +165,8 @@ Ensure your cluster meets compliance and disaster recovery standards.
 
 ### 🔨 Projects
 
-- **Project 39**: [Etcd Backup & Restore](https://devopscube.com/backup-etcd-restore-kubernetes/)
-- **Project 40**: [Velero for Backup & Restore](https://devopscube.com/backup-and-restore-eks-cluster-velero/)
+- **Project 41**: [Etcd Backup & Restore](https://devopscube.com/backup-etcd-restore-kubernetes/)
+- **Project 42**: [Velero for Backup & Restore](https://devopscube.com/backup-and-restore-eks-cluster-velero/)
 
 ---
 
