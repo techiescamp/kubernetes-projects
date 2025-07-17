@@ -1,5 +1,5 @@
 # Use Ubuntu as the base image
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 # Set the Timezone to UTC
 ENV TZ=UTC

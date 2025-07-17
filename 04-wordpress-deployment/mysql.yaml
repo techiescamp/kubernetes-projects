@@ -44,43 +44,24 @@ spec:
         - name: mysql-config
           mountPath: /docker-entrypoint-initdb.d
         resources:
-          requests:
-            memory: "256Mi"
-            cpu: "100m"
-          limits:
-            memory: "512Mi"
-            cpu: "200m"
-        startupProbe:
-          exec:
-            command:
-              - /bin/bash
-              - -ec
-              - |
-                password_aux="${MYSQL_ROOT_PASSWORD:-}"
-                if [[ -f "${MYSQL_ROOT_PASSWORD_FILE:-}" ]]; then
-                    password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
-                fi
-                mysqladmin status -uroot -p"${password_aux}"
-          initialDelaySeconds: 80
-          periodSeconds: 10
-          failureThreshold: 30
+            requests:
+              memory: "256Mi"
+              cpu: "100m"
+            limits:
+              memory: "512Mi"
+              cpu: "200m"
         livenessProbe:
           tcpSocket:
             port: 3306
+          initialDelaySeconds: 30
           periodSeconds: 10
           timeoutSeconds: 5
+          successThreshold: 1
           failureThreshold: 3
         readinessProbe:
-          exec:
-            command:
-              - /bin/bash
-              - -ec
-              - |
-                password_aux="${MYSQL_ROOT_PASSWORD:-}"
-                if [[ -f "${MYSQL_ROOT_PASSWORD_FILE:-}" ]]; then
-                    password_aux=$(cat "$MYSQL_ROOT_PASSWORD_FILE")
-                fi
-                mysqladmin ping -uroot -p"${password_aux}"
+          tcpSocket:
+            port: 3306
+          initialDelaySeconds: 30
           periodSeconds: 10
           timeoutSeconds: 5
           successThreshold: 1
@@ -89,9 +70,14 @@ spec:
         - name: mysql-config
           configMap:
             name: mysql-configmap
-        - name: mysql-volume
-          persistentVolumeClaim:
-            claimName: mysql-pvc
+  volumeClaimTemplates:
+    - metadata:
+        name: mysql-volume
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 2Gi
 ---
 apiVersion: v1
 kind: Service

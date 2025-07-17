@@ -1,3 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-pvc
+  namespace: wordpress
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -13,9 +25,11 @@ spec:
       labels:
         app: wordpress
     spec:
+      securityContext:
+        fsGroup: 33
       containers:
         - name: wordpress
-          image: techiescamp/wordpress-nginx:6.0.0
+          image: techiescamp/wordpress-nginx:7.0.0
           env:
             - name: DB_HOST
               value: mysql-service.wordpress.svc.cluster.local
@@ -48,21 +62,13 @@ spec:
             - name: nginx-config-volume
               mountPath: /etc/nginx/conf.d
             - name: wordpress-persistent-storage
-              mountPath: /var/www/html/wordpress/wp-content
-          startupProbe:
-            httpGet:
-              path: /wp-login.php
-              port: 80
-              scheme: 'HTTP'
-            initialDelaySeconds: 60
-            periodSeconds: 10
-            timeoutSeconds: 5
-            failureThreshold: 30
+              mountPath: /var/www/html/wordpress/wp-content/uploads
           readinessProbe:
             httpGet:
               path: /wp-login.php
               port: 80
               scheme: 'HTTP'
+            initialDelaySeconds: 30
             periodSeconds: 10
             timeoutSeconds: 5
             successThreshold: 1
@@ -72,6 +78,7 @@ spec:
               path: /wp-admin/install.php
               port: 80
               scheme: 'HTTP'
+            initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
             successThreshold: 1
@@ -83,7 +90,6 @@ spec:
         - name: wordpress-persistent-storage
           persistentVolumeClaim:
             claimName: wordpress-pvc
-
 ---
 kind: Service
 apiVersion: v1
