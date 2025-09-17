@@ -16,7 +16,7 @@ If you're learning from this repository, consider giving it a **star**! It helps
 
 If you would like community support and want to discuss with experienced Kubernetes experts, you can join the DevOpsCube Discord channel.
 
-> **Join Here: ** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
+> **Join Here:** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
 
 ## 🧱 Organized Kubernetes & CKA Learning & Preparation
 
