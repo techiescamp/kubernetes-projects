@@ -8,23 +8,9 @@ This repository offers a series of practical Kubernetes projects designed to tak
 - **Structured Path**: Progress through projects that cover fundamental to advanced Kubernetes concepts.
 - **Certification Preparation**: Ideal for those preparing for Kubernetes certifications like CKA, CKAD and CKS.
 
-## 🧱 Organized Kubernetes & CKA Learning & Preparation
-
-If you Looking for an organized way to learn Kubernetes and prepare for the CKA exam? 
-
-Check out our [Complete Kubernetes & CKA Certification Course](https://courses.devopscube.com/p/cka-complete-prep-course-practice-tests). 
-
-It includes illustrations, hands-on exercises, real-world examples, and dedicated Discord support. 
-
-Use code **DCUBE30** to get 30% OFF today!
-
----
-
 ## ⭐ Support
 
 If you're learning from this repository, consider giving it a **star**! It helps others discover it too.
-
----
 
 ## Community Support
 
@@ -32,7 +18,16 @@ If you would like community support and want to discuss with experienced Kuberne
 
 > **Join Here: ** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
 
-# Kubernetes Learning Guide
+## 🧱 Organized Kubernetes & CKA Learning & Preparation
+
+If you Looking for an organized way to learn Kubernetes and prepare for the CKA exam? 
+
+> Check out our [Complete Kubernetes & CKA Certification Course](https://courses.devopscube.com/p/cka-complete-prep-course-practice-tests). 
+
+It includes illustrations, hands-on exercises, real-world examples, and dedicated Discord support. 
+
+> [!NOTE]
+>Note: Use code **DCUBE30** to get 30% OFF on the course today!
 
 ## 🖥️ Cluster Setup
 
@@ -44,8 +39,6 @@ Learn how to manually deploy and configure Kubernetes clusters with a focus on f
 - **Project 2**: [Self-Hosted Kubeadm Cluster](https://devopscube.com/setup-kubernetes-cluster-kubeadm)
 - **Project 3**: [Install Minikube Tutorial](https://devopscube.com/kubernetes-minikube-tutorial/)
 
----
-
 ## 🌐 Networking
 
 Explore intermediate concepts like ingress controllers and autoscaling for network management.
@@ -56,8 +49,6 @@ Explore intermediate concepts like ingress controllers and autoscaling for netwo
 - **Project 5**: [Nginx Ingress Controller + Cert Manager](https://devopscube.com/nginx-ingress-with-cert-manager/)
 - **Project 6**: [TLS/SSL Ingress Config](https://devopscube.com/configure-ingress-tls-kubernetes/)
 - **Project 7**: [AWS Cloud Controller Manager](https://devopscube.com/aws-cloud-controller-manager/)
-
----
 
 ## 🔐 Secret Management
 
@@ -71,8 +62,6 @@ Learn how to handle Kubernetes secrets, vaulting mechanisms, and external secret
 - **Project 11**: [Vault Agent Injector to Inject Secrets in Pods](https://devopscube.com/vault-agent-injector-tutorial/)
 - **Project 12**: [Secrets Store CSI Driver on AWS EKS](https://devopscube.com/secrets-store-csi-dirver-eks/)
 
----
-
 ## 🛠️ Infra Deployment
 
 Learn how to set up and manage the underlying infrastructure, including monitoring, storage, and provisioning.
@@ -83,8 +72,6 @@ Learn how to set up and manage the underlying infrastructure, including monitori
 - **Project 14**: [Jenkins as StatefulSet](https://devopscube.com/deploy-jenkins-as-statefulset-on-kubernetes/)
 - **Project 15**: [Jenkins Build Agents on Kubernetes](https://devopscube.com/jenkins-build-agents-kubernetes/)
 - **Project 16**: [Argo CD Setup](https://devopscube.com/setup-argo-cd-using-helm/)
-
----
 
 ## 📊 Monitoring
 
@@ -103,8 +90,6 @@ Collect and analyze metrics and logs using popular Kubernetes observability tool
 - **Project 25**: [Kubernetes Logging Guide](https://devopscube.com/kubernetes-logging-tutorial/)
 - **Project 26**: [Sensu Monitoring with Sidecar](https://devopscube.com/kubernetes-monitoring-sensu/)
 
----
-
 ## 🚀 App Deployment
 
 Learn to deploy and scale various real-world applications on Kubernetes.
@@ -116,8 +101,6 @@ Learn to deploy and scale various real-world applications on Kubernetes.
 - **Project 29**: Deploy Python Flask App with PostgreSQL *(In Development)*
 - **Project 30**: Deploy Node.js App with MongoDB *(In Development)*
 
----
-
 ## 📈 Application Scaling
 
 Leverage Kubernetes autoscaling features for better resource efficiency.
@@ -127,8 +110,6 @@ Leverage Kubernetes autoscaling features for better resource efficiency.
 - **Project 31**: [Horizontal Pod Autoscaler] *(In Development)*
 - **Project 32**: [Vertical Pod Autoscaler](https://blog.techiescamp.com/kubernetes-vertical-pod-autoscaler/)
 - **Project 33**: [Cluster Autoscaler on EKS](https://devopscube.com/cluster-autoscaler/)
-
----
 
 ## 💾 Storage
 
@@ -142,8 +123,6 @@ Manage persistent storage, volumes, and stateful apps in Kubernetes.
 - **Project 37**: [Kube State Metrics](https://devopscube.com/setup-kube-state-metrics/)
 - **Project 38**: [Dynamic Storage Provisioning](https://devopscube.com/dynamic-storage-provisioning-with-storage-classes)
 
----
-
 ## 🔐 Security
 
 Master Kubernetes security best practices, policies, and runtime protection.
@@ -153,8 +132,6 @@ Master Kubernetes security best practices, policies, and runtime protection.
 - **Project 39**: [Seccomp in Kubernetes](https://devopscube.com/seccomp-in-kubernetes/)
 - **Project 40**: [Kube-Bench – Kubernetes CIS Benchmarking Tool](https://devopscube.com/kube-bench-guide/)
 
----
-
 ## ⚖️ Backup Strategy
 
 Ensure your cluster meets compliance and disaster recovery standards.
@@ -163,9 +140,6 @@ Ensure your cluster meets compliance and disaster recovery standards.
 
 - **Project 41**: [Etcd Backup & Restore](https://devopscube.com/backup-etcd-restore-kubernetes/)
 - **Project 42**: [Velero for Backup & Restore](https://devopscube.com/backup-and-restore-eks-cluster-velero/)
-
----
-
 
 ## 🧭 How to Use This Repository
 
