@@ -6,11 +6,17 @@ This repository offers a series of practical Kubernetes projects designed to tak
 
 - **Hands-On Learning**: Dive into real-world scenarios and build your Kubernetes expertise through practical implementations.
 - **Structured Path**: Progress through projects that cover fundamental to advanced Kubernetes concepts.
-- **Certification Preparation**: Ideal for those preparing for Kubernetes certifications like CKA and CKAD.
+- **Certification Preparation**: Ideal for those preparing for Kubernetes certifications like CKA, CKAD and CKS.
 
-> 🎓 Looking for a complete guide to crack the CKA exam?  
-> Check out the [Complete CKA Certification Course](https://techiescamp.com/p/cka-complete-prep-course-practice-tests).  
-> Use code **DCUBE25** to get **25% OFF**!
+## 🧱 Organized Kubernetes & CKA Learning & Preparation
+
+If you Looking for an organized way to learn Kubernetes and prepare for the CKA exam? 
+
+Check out our [Complete Kubernetes & CKA Certification Course](https://courses.devopscube.com/p/cka-complete-prep-course-practice-tests). 
+
+It includes illustrations, hands-on exercises, real-world examples, and dedicated Discord support. 
+
+Use code **DCUBE30** to get 30% OFF today!
 
 ---
 
@@ -20,23 +26,13 @@ If you're learning from this repository, consider giving it a **star**! It helps
 
 ---
 
-## 💸 Kubernetes Certification Voucher (Up to 38% OFF!)
+## Community Support
 
-> 🚨 Use code **DCUBE30** at [kube.promo/devops](https://kube.promo/devops) for a **limited-time discount** on Kubernetes certifications.  
-> Voucher valid for **1 year** after registration!
+If you would like community support and want to discuss with experienced Kubernetes experts, you can join the DevOpsCube Discord channel.
 
-**Top Bundles:**
+> **Join Here: ** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
 
-- [KCNA + KCSA + CKA + CKAD + CKS](https://kube.promo/kubestronaut) – Save $788  
-- [CKA + CKAD + CKS](https://kube.promo/k8s-bundle) – Save $528  
-- [CKA + CKS](https://kube.promo/bundle) – Save $355  
-- [KCNA + CKA](https://kube.promo/kcna-cka) – Save $288  
-- [KCSA + CKS](https://kube.promo/kcsa-cks) – Save $229  
-- [KCNA + KCSA](https://kube.promo/kcna-kcsa) – Save $203  
-
----
-
-# Kubernetes DevOps Setup Guide
+# Kubernetes Learning Guide
 
 ## 🖥️ Cluster Setup
 
