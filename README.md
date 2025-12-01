@@ -18,25 +18,21 @@ If you would like community support and want to discuss with experienced Kuberne
 
 > **Join Here:** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
 
-## Kubernetes Certification Voucher (UpTo 55% OFF) 🎉
+## Kubernetes Certification Voucher (UpTo 65% OFF) 🎉
 
 As part of our commitment to helping the DevOps community save money on Kubernetes Certifications, we continuously update the latest voucher codes from the Linux Foundation
 
 > [!IMPORTANT]
-> 🚀  Kubernetes Certification aspirants can **save 40%** today using code **40KUBE25CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+> 🚀  Kubernetes Certification aspirants can **save 50%** today using code **CW25CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-The following are the best bundles to **save upto 55%** with code **40KUBE25CT**
+The following are the best bundles to **save 65%** with code **CW25BUNCT**
 
-- CKA + CKAD (45% Savings): [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
-- CKA + CKS Bundle (45% Savings) [kube.promo/bundle](https://kube.promo/bundle)
-- KCNA + KCSA + CKA + CKAD + CKS (55% Savings): [kube.promo/kubestronaut](https://kube.promo/kubestronaut)
-- CKA + CKAD + CKS Exam bundle (47% Savings): [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
-- KCNA + CKA (45% Savings) [kube.promo/kcka-bundle](https://kube.promo/kcna-cka)
-- KCSA + CKS Exam Bundle (45% Savings) [kube.promo/kcsa-cks](https://kube.promo/kcsa-cks)
-- KCNA + KCSA Exam Bundle (45% Savings) [kube.promo/kcna-kcsa](https://kube.promo/kcna-kcsa)
+- CKA + CKS Bundle: [kube.promo/bundle](https://kube.promo/bundle)
+- CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
+- CKA + CKAD + CKS Exam bundle: [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
 
 > [!NOTE]
->⌛ Act fast—this limited-time offer won’t be around much longer!
+> For all the offers, check out the [Linux Foudnation Coupon](https://github.com/techiescamp/linux-foundation-coupon) repo.
 
 ## Organized Kubernetes & CKA Learning
 
