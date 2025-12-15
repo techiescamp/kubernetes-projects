@@ -18,18 +18,18 @@ If you would like community support and want to discuss with experienced Kuberne
 
 > **Join Here:** [DevOpsCube Discord Community](https://discord.gg/u6x6NmyX)
 
-## Kubernetes Certification Voucher (UpTo 65% OFF) 🎉
+## Kubernetes Certification Voucher (UpTo 38% OFF) 🎉
 
 As part of our commitment to helping the DevOps community save money on Kubernetes Certifications, we continuously update the latest voucher codes from the Linux Foundation
 
 > [!IMPORTANT]
-> 🚀  Kubernetes Certification aspirants can **save 50%** today using code **CW25CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+> 🚀  Kubernetes Certification aspirants can **save 30%** today using code **DCUBE30** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-The following are the best bundles to **save 65%** with code **CW25BUNCT**
+The following are the best bundles to **save 38% (up to $788)** with code **DCUBE30**
 
-- CKA + CKS Bundle: [kube.promo/bundle](https://kube.promo/bundle)
-- CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
-- CKA + CKAD + CKS Exam bundle: [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
+- KCNA + KCSA + CKA + CKAD + CKS ($788 Savings): [kube.promo/kubestronaut](https://kube.promo/kubestronaut)
+- CKA + CKAD + CKS Exam bundle ($528 Savings): [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
+- CKA + CKS Bundle ($355 Savings) [kube.promo/bundle](https://kube.promo/bundle)
 
 > [!NOTE]
 > For all the offers, check out the [Linux Foudnation Coupon](https://github.com/techiescamp/linux-foundation-coupon) repo.
