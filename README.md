@@ -32,7 +32,7 @@ The following are the best bundles to **save 38% (up to $788)** with code **DCUB
 - CKA + CKS Bundle ($355 Savings) [kube.promo/bundle](https://kube.promo/bundle)
 
 > [!NOTE]
-> For all the offers, check out the [Linux Foudnation Coupon](https://github.com/techiescamp/linux-foundation-coupon) repo.
+> For all the offers, check out the [Linux Foudnation Coupon](https://github.com/techiescamp/linux-foundation-coupon)
 
 ## Organized Kubernetes & CKA Learning
 
