@@ -22,20 +22,22 @@ If you would like community support and want to discuss with experienced Kuberne
 
 If you are learning Kubernetes and preparing for Kubernetes certifications, these voucher codes will help you save money on your certification registration.
 
-CKA, CKAD, CKS, KCNA etc.. aspirants can **save 35%** today
+CKA, CKAD, CKS, KCNA etc.. aspirants can **save 30%** today
 
 > [!IMPORTANT]
-> Use code **PI26CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+> Use code **DCUBE30** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-The following are the best bundles to **save upto 50%** with code **PI26BUNCT**
+The following are the best bundles to **save upto 55%** with code **R2KUBECT**
 
- CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
+- CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
 - CKA + CKS Bundle: [kube.promo/bundle](https://kube.promo/bundle)
 - CKA + CKAD + CKS Exam bundle: [kube.promo/k8s-bundle](https://kube.promo/k8s-bundle)
-- KCNA + KCSA + CKA + CKAD + CKS: [kube.promo/kubestronaut](https://kube.promo/kubestronaut)
+
+> Checkout all the latest bundle offers at [Linux Foundation Coupon](https://github.com/techiescamp/linux-foundation-coupon) repo.
 
 > [!NOTE]
-> For all the other offers, check out the [Linux Foudnation Coupon](https://github.com/techiescamp/linux-foundation-coupon) repo.
+>⌛ Act fast—this limited-time offer won’t be around much longer!
+> You have one year of validity to appear for the certification exam after registration
 
 ## Organized Kubernetes & CKA Learning
 
