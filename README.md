@@ -2,6 +2,9 @@
 
 This repository offers a series of practical Kubernetes projects designed to take you from beginner to advanced levels. By engaging in these hands-on exercises, you'll gain real-world experience in deploying, managing, and scaling containerized applications within Kubernetes environments.
 
+> [!NOTE]
+>Note: If you are looking for a structured course to learn Kubernetes and prepare for the CKA exam, check out the [Complete Kubernetes and CKA course](https://courses.devopscube.com/p/certified-kubernetes-administrator-course). Use code **DCUBE30** to get a 30% discount.
+
 ## 🚀 Why This Repository?
 
 - **Hands-On Learning**: Dive into real-world scenarios and build your Kubernetes expertise through practical implementations.
