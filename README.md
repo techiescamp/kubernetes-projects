@@ -25,7 +25,7 @@ If you would like community support and want to discuss with experienced Kuberne
 
 If you are learning Kubernetes and preparing for Kubernetes certifications, these voucher codes will help you save money on your certification registration.
 
-CKA, CKAD, CKS, KCNA etc.. aspirants can **save 35%** today
+CKA, CKAD, CKS, KCNA etc.. aspirants can **save 30%** today
 
 > [!IMPORTANT]
 > Use code **DCUBE30** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
