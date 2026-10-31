@@ -3,7 +3,7 @@
 This repository offers a series of practical Kubernetes projects designed to take you from beginner to advanced levels. By engaging in these hands-on exercises, you'll gain real-world experience in deploying, managing, and scaling containerized applications within Kubernetes environments.
 
 > [!NOTE]
->Note: If you are looking for a structured course to learn Kubernetes and prepare for the CKA exam, check out the [Complete Kubernetes and CKA course](https://courses.devopscube.com/p/certified-kubernetes-administrator-course). Use code **TREATS35CT** to get a 35% discount.
+>Note: If you are looking for a structured course to learn Kubernetes and prepare for the CKA exam, check out the [Complete Kubernetes and CKA course](https://courses.devopscube.com/p/certified-kubernetes-administrator-course). Use code **DCUBE30** to get a 30% discount.
 
 ## 🚀 Why This Repository?
 
@@ -21,16 +21,16 @@ If you would like community support and want to discuss with experienced Kuberne
 
 > **Join Here:** [DevOpsCube Discord Community](https://discord.gg/D6B9wXMp5P)
 
-## Kubernetes Certification Voucher (UpTo 45% OFF) 🎉
+## Kubernetes Certification Voucher (UpTo 35% OFF) 🎉
 
 If you are learning Kubernetes and preparing for Kubernetes certifications, these voucher codes will help you save money on your certification registration.
 
-CKA, CKAD, CKS, KCNA etc.. aspirants can **save 35%** today
+CKA, CKAD, CKS, KCNA etc.. aspirants can **save 30%** today
 
 > [!IMPORTANT]
-> Use code **TREATS35CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+> Use code **DCUBE30** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-Use code **TREATS35CT** with the following bundles to **save upto 45%**
+Use code **DCUBE30** with the following bundles to **save upto 35%**
 
 - CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
 - CKA + CKS Bundle: [kube.promo/bundle](https://kube.promo/bundle)
