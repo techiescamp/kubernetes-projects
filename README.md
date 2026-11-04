@@ -21,16 +21,16 @@ If you would like community support and want to discuss with experienced Kuberne
 
 > **Join Here:** [DevOpsCube Discord Community](https://discord.gg/D6B9wXMp5P)
 
-## Kubernetes Certification Voucher (UpTo 35% OFF) 🎉
+## Kubernetes Certification Voucher (UpTo 47% OFF) 🎉
 
 If you are learning Kubernetes and preparing for Kubernetes certifications, these voucher codes will help you save money on your certification registration.
 
-CKA, CKAD, CKS, KCNA etc.. aspirants can **save 30%** today
+CKA, CKAD, CKS, KCNA etc.. aspirants can **save 40%** today
 
 > [!IMPORTANT]
-> Use code **DCUBE30** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
+> Use code **40KUBE26CT** at https://kube.promo/devops. It is a limited-time offer from the Linux Foundation.
 
-Use code **DCUBE30** with the following bundles to **save upto 35%**
+Use code **40KUBE26CT** with the following bundles to **save upto 47%**
 
 - CKA + CKAD: [kube.promo/cka-ckad](https://kube.promo/cka-ckad)
 - CKA + CKS Bundle: [kube.promo/bundle](https://kube.promo/bundle)
